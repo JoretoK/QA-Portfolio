@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Georgi Koleshanski — QA Engineer workspace. Manual and automated testing specialist." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <title>Georgi Koleshanski | QA Workspace</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="app">
+
+  <!-- ═══ TOP BAR ═══ -->
+  <header class="topbar" role="banner">
+    <div class="tb-left">
+      <button class="tb-toggle" id="sidebarToggle" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="tb-brand">
+        <div class="tb-logo" aria-hidden="true">GK</div>
+        <span class="tb-name">QA Workspace</span>
+      </div>
+    </div>
+    <div class="tb-right">
+      <div class="tb-user" aria-label="User: Georgi Koleshanski">
+        <div class="tb-avatar" aria-hidden="true">
+          <div class="tb-avatar-fallback">GK</div>
+          <img src="avatar.jpg" alt="" class="tb-avatar-img" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ APP BODY ═══ -->
+  <div class="app-body">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+      <div class="sidebar-inner">
+
+        <div class="sb-project">
+          <div class="sb-proj-avatar" aria-hidden="true">
+            <div class="sb-avatar-fallback">GK</div>
+            <img src="avatar.jpg" alt="" class="sb-avatar-img" onerror="this.style.display='none'" />
+          </div>
+          <div class="sb-proj-info">
+            <div class="sb-proj-name">Georgi Koleshanski</div>
+            <div class="sb-proj-type">QA Engineer</div>
+          </div>
+          <button class="sb-close" id="sidebarClose" aria-label="Close navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <nav class="sb-nav" role="navigation">
+          <a class="sn-item active" data-view="dashboard" href="#dashboard" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span>Dashboard</span>
+          </a>
+          <a class="sn-item" data-view="profile" href="#profile" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Profile</span>
+          </a>
+
+          <div class="sn-section">WORK</div>
+
+          <a class="sn-item" data-view="board" href="#board" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="14" rx="1"/><rect x="17" y="3" width="4" height="10" rx="1"/></svg>
+            <span>Work Board</span>
+          </a>
+          <a class="sn-item" data-view="skills" href="#skills" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Skills &amp; Tools</span>
+          </a>
+
+          <div class="sn-section">CREDENTIALS</div>
+
+          <a class="sn-item" data-view="certs" href="#certs" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            <span>Certifications</span>
+          </a>
+          <a class="sn-item" data-view="education" href="#education" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Education</span>
+          </a>
+
+          <div class="sn-section">CONNECT</div>
+
+          <a class="sn-item" href="https://github.com/JoretoK" target="_blank" rel="noopener noreferrer" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            <span>GitHub</span>
+            <svg class="sn-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a class="sn-item sn-linkedin" href="https://www.linkedin.com/in/georgi-koleshanski-002791312/" target="_blank" rel="noopener noreferrer" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn</span>
+            <svg class="sn-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a class="sn-item" href="mailto:joretok79@gmail.com" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>Email</span>
+            <svg class="sn-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Mobile overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- ═══ WORKSPACE ═══ -->
+    <main class="workspace" id="workspace" role="main">
+
+      <!-- ─── DASHBOARD ─── -->
+      <div class="view view-active" id="view-dashboard">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Dashboard</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Dashboard</h1>
+              <p class="page-sub">QA Engineering Overview</p>
+            </div>
+            <div class="ph-right">
+              <span class="status-available">
+                <span class="avail-dot" aria-hidden="true"></span>
+                Currently Employed
+              </span>
+            </div>
+          </div>
+
+          <!-- Metric strip -->
+          <div class="metric-strip">
+            <div class="metric-card">
+              <div class="metric-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="metric-body">
+                <div class="metric-val">2+</div>
+                <div class="metric-lbl">Years Experience</div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div class="metric-body">
+                <div class="metric-val">2</div>
+                <div class="metric-lbl">Active Roles</div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+              </div>
+              <div class="metric-body">
+                <div class="metric-val">9</div>
+                <div class="metric-lbl">Certifications</div>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="metric-body">
+                <div class="metric-val">12+</div>
+                <div class="metric-lbl">Testing Tools</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashboard grid -->
+          <div class="dash-grid">
+            <div class="dash-main">
+
+              <!-- Profile panel -->
+              <div class="panel">
+                <div class="panel-head">
+                  <span class="panel-title">Profile Overview</span>
+                </div>
+                <div class="panel-body">
+                  <div class="profile-summary">
+                    <div class="ps-avatar" aria-hidden="true">
+                      <div class="ps-avatar-fallback">GK</div>
+                      <img src="avatar.jpg" alt="" class="ps-avatar-img" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="ps-info">
+                      <h2 class="ps-name">Georgi Koleshanski</h2>
+                      <span class="ps-role-chip">QA Engineer</span>
+                      <div class="ps-meta">
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                          Bulgaria, On-site
+                        </span>
+                        <span>
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                          Bulgarian · English · Russian
+                        </span>
+                      </div>
+                      <p class="ps-bio">2+ years delivering reliable software through comprehensive manual and automated testing. Specialized in test strategy, automation frameworks, and quality advocacy across the full SDLC.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Activity timeline panel -->
+              <div class="panel">
+                <div class="panel-head"><span class="panel-title">Career Timeline</span></div>
+                <div class="panel-body panel-body-compact">
+                  <div class="activity-feed">
+                    <div class="af-item">
+                      <div class="af-dot af-dot-green"></div>
+                      <div class="af-content">
+                        <div class="af-title">QA Automation Engineer Diploma</div>
+                        <div class="af-sub">Software University (SoftUni)</div>
+                        <div class="af-date">Oct 2025</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-blue"></div>
+                      <div class="af-content">
+                        <div class="af-title">Quality Assurance Specialist</div>
+                        <div class="af-sub">Inverso.bg &amp; Voidweb</div>
+                        <div class="af-date">Jul 2024 – Present</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-blue"></div>
+                      <div class="af-content">
+                        <div class="af-title">Programming Advanced for QA</div>
+                        <div class="af-sub">Software University (SoftUni)</div>
+                        <div class="af-date">Jul 2024</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-gray"></div>
+                      <div class="af-content">
+                        <div class="af-title">QA Fundamentals &amp; Manual Testing</div>
+                        <div class="af-sub">Software University (SoftUni)</div>
+                        <div class="af-date">Oct 2023</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-gray"></div>
+                      <div class="af-content">
+                        <div class="af-title">QA Engineer Program — Completed</div>
+                        <div class="af-sub">Software University (SoftUni)</div>
+                        <div class="af-date">Jul 2023</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-gray"></div>
+                      <div class="af-content">
+                        <div class="af-title">Bachelor's Degree — In Progress</div>
+                        <div class="af-sub">University of Plovdiv</div>
+                        <div class="af-date">Sep 2022</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="dash-side">
+
+              <!-- Status panel -->
+              <div class="panel">
+                <div class="panel-head"><span class="panel-title">Status</span></div>
+                <div class="panel-body">
+                  <div class="status-detail-list">
+                    <div class="sdl-row">
+                      <span class="sdl-key">Availability</span>
+                      <span class="sdl-val"><span class="badge-avail">Currently Employed</span></span>
+                    </div>
+                    <div class="sdl-row">
+                      <span class="sdl-key">Location</span>
+                      <span class="sdl-val">Bulgaria</span>
+                    </div>
+                    <div class="sdl-row">
+                      <span class="sdl-key">Work Type</span>
+                      <span class="sdl-val">On-site</span>
+                    </div>
+                    <div class="sdl-row">
+                      <span class="sdl-key">Focus Area</span>
+                      <span class="sdl-val">Manual &amp; Automated QA</span>
+                    </div>
+                    <div class="sdl-row">
+                      <span class="sdl-key">SDLC Role</span>
+                      <span class="sdl-val">QA Specialist</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick skill summary panel -->
+              <div class="panel">
+                <div class="panel-head">
+                  <span class="panel-title">Skill Coverage</span>
+                  <span class="panel-badge">97%</span>
+                </div>
+                <div class="panel-body panel-body-compact">
+                  <div class="mini-skills">
+                    <div class="ms-row"><span class="ms-name">Automation Tools</span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
+                    <div class="ms-row"><span class="ms-name">API &amp; Performance</span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
+                    <div class="ms-row"><span class="ms-name">Testing Types</span><div class="ms-bar"><div class="ms-fill" data-w="100"></div></div><span class="ms-pct">100%</span></div>
+                    <div class="ms-row"><span class="ms-name">Languages</span><div class="ms-bar"><div class="ms-fill" data-w="85"></div></div><span class="ms-pct">85%</span></div>
+                    <div class="ms-row"><span class="ms-name">Reporting</span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
+                    <div class="ms-row"><span class="ms-name">Process</span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick access -->
+              <div class="panel">
+                <div class="panel-head"><span class="panel-title">Quick Access</span></div>
+                <div class="panel-body panel-body-compact">
+                  <div class="quick-links">
+                    <button class="ql-btn" data-view="board">Work Board <span class="ql-count">3 issues</span></button>
+                    <button class="ql-btn" data-view="certs">Certifications <span class="ql-count">9 credentials</span></button>
+                    <button class="ql-btn" data-view="skills">Skills &amp; Tools <span class="ql-count">22 skills</span></button>
+                    <button class="ql-btn" data-view="education">Education <span class="ql-count">3 entries</span></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PROFILE / ABOUT ─── -->
+      <div class="view" id="view-profile">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Profile</span></nav>
+
+          <div class="issue-header-bar">
+            <div class="ihb-left">
+              <span class="issue-type-chip story">Story</span>
+              <span class="issue-key-label">GK-PROFILE</span>
+            </div>
+          </div>
+
+          <h1 class="issue-page-title">Georgi Koleshanski</h1>
+          <p class="issue-page-sub">QA Engineer — Professional Profile</p>
+
+          <div class="issue-layout">
+            <!-- Main content -->
+            <div class="issue-main">
+              <div class="issue-section">
+                <h2 class="is-heading">Description</h2>
+                <div class="is-body">
+                  <p>QA Engineer with 2+ years of experience in both Manual and Automated Software Testing, focused on delivering reliable, high-quality software products.</p>
+                  <p>Experienced in designing, executing, and maintaining test cases, identifying defects, and collaborating closely with development teams throughout the software development lifecycle.</p>
+                  <p>Passionate about improving software quality through efficient testing strategies, automation, and continuous process improvement.</p>
+                </div>
+              </div>
+
+              <div class="issue-section">
+                <h2 class="is-heading">Test Case Summary</h2>
+                <div class="tc-wrap">
+                  <div class="tc-toolbar">
+                    <span class="tc-label">test-suite: candidate-profile</span>
+                    <span class="tc-runinfo">Last run: Present &nbsp;·&nbsp; 6/6 passed</span>
+                  </div>
+                  <div class="tc-scroll">
+                    <table class="tc-table" aria-label="Candidate profile test cases">
+                      <thead>
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Objective</th>
+                          <th scope="col">Result</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr><td class="tc-id">TC-001</td><td class="tc-obj">QA Experience</td><td class="tc-res">2+ yrs · Manual &amp; Automation</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-002</td><td class="tc-obj">Automation Frameworks</td><td class="tc-res">Playwright · Selenium · Appium</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-003</td><td class="tc-obj">API &amp; Performance Testing</td><td class="tc-res">Postman · JMeter · K6</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-004</td><td class="tc-obj">Test Planning &amp; Strategy</td><td class="tc-res">Full SDLC Collaboration</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-005</td><td class="tc-obj">Continuous Certification</td><td class="tc-res">9 Certifications Earned</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-006</td><td class="tc-obj">Communication</td><td class="tc-res">Bulgarian (Native) · English (Pro)</td><td><span class="tc-pass">Pass</span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tc-footer-bar">
+                    <span>6 / 6 passed &nbsp;·&nbsp; Pass rate: 100% &nbsp;·&nbsp; Environment: Production</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Details sidebar -->
+            <div class="issue-details" role="complementary" aria-label="Profile details">
+              <div class="isd-group">
+                <div class="isd-label">Assignee</div>
+                <div class="isd-val isd-with-avatar">
+                  <div class="isd-mini-avatar" aria-hidden="true">GK</div>
+                  Georgi Koleshanski
+                </div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Status</div>
+                <div class="isd-val"><span class="badge-avail">Currently Employed</span></div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Priority</div>
+                <div class="isd-val isd-priority">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+                  High
+                </div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Location</div>
+                <div class="isd-val">Bulgaria, On-site</div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Experience</div>
+                <div class="isd-val">2+ Years</div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Focus</div>
+                <div class="isd-val">Manual &amp; Automated Testing</div>
+              </div>
+              <div class="isd-group">
+                <div class="isd-label">Collaboration</div>
+                <div class="isd-val">Cross-functional Teams</div>
+              </div>
+
+              <div class="isd-divider"></div>
+
+              <div class="isd-section-label">Languages</div>
+              <div class="isd-lang-list">
+                <div class="isd-lang">
+                  <span class="isd-lang-name">Bulgarian</span>
+                  <span class="isd-lang-level">Native</span>
+                  <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="100"></div></div>
+                </div>
+                <div class="isd-lang">
+                  <span class="isd-lang-name">English</span>
+                  <span class="isd-lang-level">Professional</span>
+                  <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="70"></div></div>
+                </div>
+                <div class="isd-lang">
+                  <span class="isd-lang-name">Russian</span>
+                  <span class="isd-lang-level">Elementary</span>
+                  <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="25"></div></div>
+                </div>
+              </div>
+
+              <div class="isd-divider"></div>
+
+              <div class="isd-group">
+                <div class="isd-label">LinkedIn</div>
+                <div class="isd-val">
+                  <a href="https://www.linkedin.com/in/georgi-koleshanski-002791312/" target="_blank" rel="noopener noreferrer" class="isd-link">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── WORK BOARD ─── -->
+      <div class="view" id="view-board">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Work Board</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Work Board</h1>
+              <span class="board-type-tag">Kanban</span>
+            </div>
+          </div>
+
+          <div class="board-toolbar">
+            <div class="bt-filters" role="group" aria-label="Filter issues">
+              <button class="btf-btn btf-active" data-filter="all">All</button>
+              <button class="btf-btn" data-filter="active">Active</button>
+              <button class="btf-btn" data-filter="closed">Closed</button>
+            </div>
+            <div class="bt-info">3 issues &nbsp;·&nbsp; 2 active &nbsp;·&nbsp; 1 closed</div>
+          </div>
+
+          <div class="kanban" role="list" aria-label="Work board columns">
+
+            <!-- IN PROGRESS column -->
+            <div class="kanban-col" role="listitem" id="col-active">
+              <div class="kc-header">
+                <span class="kc-dot kc-dot-blue" aria-hidden="true"></span>
+                <span class="kc-name">In Progress</span>
+                <span class="kc-count" aria-label="2 issues">2</span>
+              </div>
+              <div class="kc-cards">
+
+                <!-- GK-001 -->
+                <article class="issue-card" data-status="active">
+                  <div class="ic-top-row">
+                    <div class="ic-meta">
+                      <span class="ic-type-story" aria-label="Story type" title="Story"></span>
+                      <span class="ic-key">GK-001</span>
+                    </div>
+                    <span class="ic-priority-high" aria-label="High priority" title="High priority"></span>
+                  </div>
+                  <h3 class="ic-title">Quality Assurance Specialist</h3>
+                  <div class="ic-epic">
+                    <span class="epic-dot" style="--epic-c:#5243aa" aria-hidden="true"></span>
+                    <span class="epic-name">Inverso.bg</span>
+                  </div>
+                  <div class="ic-dates">Jul 2024 – Present &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
+                  <p class="ic-desc">First invoicing platform with integrated AI in Bulgaria. Functional, performance, and security testing.</p>
+                  <div class="ic-tags" aria-label="Skills">
+                    <span>Playwright</span><span>JavaScript</span><span>API Testing</span><span>C# / .NET</span><span>Allure</span>
+                  </div>
+                  <div class="ic-footer">
+                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
+                    <span class="ic-status-badge ic-badge-active">Active</span>
+                  </div>
+                </article>
+
+                <!-- GK-002 -->
+                <article class="issue-card" data-status="active">
+                  <div class="ic-top-row">
+                    <div class="ic-meta">
+                      <span class="ic-type-story" aria-label="Story type" title="Story"></span>
+                      <span class="ic-key">GK-002</span>
+                    </div>
+                    <span class="ic-priority-high" aria-label="High priority" title="High priority"></span>
+                  </div>
+                  <h3 class="ic-title">Quality Assurance Specialist</h3>
+                  <div class="ic-epic">
+                    <span class="epic-dot" style="--epic-c:#0065ff" aria-hidden="true"></span>
+                    <span class="epic-name">Voidweb</span>
+                  </div>
+                  <div class="ic-dates">Jul 2024 – Present &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
+                  <p class="ic-desc">Comprehensive testing methodologies across multiple projects and testing domains.</p>
+                  <div class="ic-tags" aria-label="Skills">
+                    <span>GitHub</span><span>Cross-browser</span><span>Test Planning</span><span>Mobile Testing</span>
+                  </div>
+                  <div class="ic-footer">
+                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
+                    <span class="ic-status-badge ic-badge-active">Active</span>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+            <!-- DONE column -->
+            <div class="kanban-col" role="listitem" id="col-done">
+              <div class="kc-header">
+                <span class="kc-dot kc-dot-green" aria-hidden="true"></span>
+                <span class="kc-name">Done</span>
+                <span class="kc-count" aria-label="1 issue">1</span>
+              </div>
+              <div class="kc-cards">
+
+                <!-- GK-003 -->
+                <article class="issue-card" data-status="closed">
+                  <div class="ic-top-row">
+                    <div class="ic-meta">
+                      <span class="ic-type-task" aria-label="Task type" title="Task"></span>
+                      <span class="ic-key">GK-003</span>
+                    </div>
+                    <span class="ic-priority-med" aria-label="Medium priority" title="Medium priority"></span>
+                  </div>
+                  <h3 class="ic-title">CCTV Camera Installer</h3>
+                  <div class="ic-epic">
+                    <span class="epic-dot" style="--epic-c:#6b778c" aria-hidden="true"></span>
+                    <span class="epic-name">Systera Technology Ltd</span>
+                  </div>
+                  <div class="ic-dates">Jul – Aug 2022 &nbsp;·&nbsp; 2 mos &nbsp;·&nbsp; Panagyurishte</div>
+                  <p class="ic-desc">Implementation and maintenance of electronic surveillance systems.</p>
+                  <div class="ic-tags ic-tags-muted" aria-label="Skills">
+                    <span>CCTV Install</span><span>Security Systems</span><span>Troubleshooting</span>
+                  </div>
+                  <div class="ic-footer">
+                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
+                    <span class="ic-status-badge ic-badge-done">Closed</span>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── SKILLS & TOOLS ─── -->
+      <div class="view" id="view-skills">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Skills &amp; Tools</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Skills &amp; Tools</h1>
+              <p class="page-sub">Test Coverage Report — 22 skills across 6 domains</p>
+            </div>
+            <div class="ph-right">
+              <span class="coverage-badge">97% Coverage</span>
+            </div>
+          </div>
+
+          <div class="panel skills-panel">
+            <div class="panel-head">
+              <span class="panel-title">Coverage Summary</span>
+            </div>
+            <div class="skills-table-wrap">
+              <table class="skills-table" aria-label="Skill coverage by domain">
+                <thead>
+                  <tr>
+                    <th scope="col">Domain</th>
+                    <th scope="col">Skills</th>
+                    <th scope="col" class="align-right">Coverage</th>
+                    <th scope="col" class="col-bar">Progress</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                      Automation Tools
+                    </td>
+                    <td class="st-skills">Playwright, Selenium, Appium, Mocha, Chai</td>
+                    <td class="st-pct">95%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="95"></div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                      Languages
+                    </td>
+                    <td class="st-skills">JavaScript, C# / .NET</td>
+                    <td class="st-pct">85%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="85"></div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                      API &amp; Performance
+                    </td>
+                    <td class="st-skills">Postman, Swagger, JMeter, K6, RestSharp, NUnit</td>
+                    <td class="st-pct">98%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="98"></div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                      Testing Types
+                    </td>
+                    <td class="st-skills">Manual, API, Performance, Mobile, Cross-browser, Unit</td>
+                    <td class="st-pct">100%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="100"></div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                      Reporting &amp; Collab
+                    </td>
+                    <td class="st-skills">Allure Reports, GitHub, Defect Tracking</td>
+                    <td class="st-pct">95%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="95"></div></div></td>
+                  </tr>
+                  <tr>
+                    <td class="st-domain">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      Process &amp; Strategy
+                    </td>
+                    <td class="st-skills">Test Planning &amp; Strategy, Test Case Design, SDLC Collaboration</td>
+                    <td class="st-pct">98%</td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="98"></div></div></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr class="st-total-row">
+                    <td class="st-domain"><strong>Overall Coverage</strong></td>
+                    <td class="st-skills st-muted">22 skills across 6 domains</td>
+                    <td class="st-pct st-total-pct"><strong>97%</strong></td>
+                    <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill st-bar-total" data-w="97"></div></div></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── CERTIFICATIONS ─── -->
+      <div class="view" id="view-certs">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Certifications</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Certifications</h1>
+              <p class="page-sub">9 credentials — Professional development milestones</p>
+            </div>
+          </div>
+
+          <!-- Filter bar -->
+          <div class="cert-filters" role="group" aria-label="Filter certifications">
+            <button class="cf-btn cf-active" data-cf="all">All (9)</button>
+            <button class="cf-btn" data-cf="softuni">SoftUni (8)</button>
+            <button class="cf-btn" data-cf="w3schools">W3Schools (1)</button>
+          </div>
+
+          <!-- Featured cert -->
+          <div class="cert-featured panel">
+            <div class="cert-featured-body">
+              <div class="cfb-left">
+                <span class="cert-milestone-tag">Flagship Credential</span>
+                <svg class="cfb-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                <h2>QA Automation Engineer Diploma</h2>
+                <p class="cfb-issuer">Software University (SoftUni)</p>
+                <p class="cfb-date">Issued: October 2025</p>
+                <div class="cfb-tags">
+                  <span>Back-End Test Automation</span>
+                  <span>Front-End Test Automation</span>
+                  <span>Performance Testing</span>
+                  <span>Automation Engineering</span>
+                </div>
+              </div>
+              <div class="cfb-right">
+                <div class="cfb-stat-block">
+                  <div class="cfb-stat-num">17</div>
+                  <div class="cfb-stat-lbl">Month program</div>
+                </div>
+                <div class="cfb-stat-block">
+                  <div class="cfb-stat-num">9</div>
+                  <div class="cfb-stat-lbl">Total credentials</div>
+                </div>
+                <span class="badge-cert-lg">Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cert list -->
+          <div class="panel">
+            <div class="cert-list-header" aria-hidden="true">
+              <span class="clh-name">Certification</span>
+              <span class="clh-issuer">Issuer</span>
+              <span class="clh-date">Issued</span>
+              <span class="clh-status">Status</span>
+            </div>
+            <div class="cert-list" id="certList">
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Back-End Test Automation</span>
+                  <div class="cr-tags"><span>Performance Testing</span><span>JMeter</span><span>K6</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">—</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Front-End Test Automation</span>
+                  <div class="cr-tags"><span>Selenium</span><span>Appium</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">Feb 2025</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Programming Advanced for QA</span>
+                  <div class="cr-tags"><span>Data Structures</span><span>Regex</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">Jul 2024</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Programming Fundamentals &amp; Unit Testing</span>
+                  <div class="cr-tags"><span>Unit Testing</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">May 2024</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="w3schools">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Certified C# Developer</span>
+                  <div class="cr-tags"><span>C#</span></div>
+                </div>
+                <span class="cr-issuer">W3Schools</span>
+                <span class="cr-date">Jan 2024</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>QA Fundamentals &amp; Manual Testing</span>
+                  <div class="cr-tags"><span>Manual Testing</span><span>Defect Tracking</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">Oct 2023</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Software Technologies</span>
+                  <div class="cr-tags"><span>Hardware &amp; Software</span><span>OS Fundamentals</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">Sep 2023</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+              <div class="cert-row" data-issuer="softuni">
+                <div class="cr-name">
+                  <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>QA Basics</span>
+                  <div class="cr-tags"><span>QA Fundamentals</span><span>Testing Types</span></div>
+                </div>
+                <span class="cr-issuer">SoftUni</span>
+                <span class="cr-date">Jul 2023</span>
+                <span><span class="badge-cert">Certified</span></span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── EDUCATION ─── -->
+      <div class="view" id="view-education">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Education</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Education</h1>
+              <p class="page-sub">Academic background and training programs</p>
+            </div>
+          </div>
+
+          <div class="edu-timeline">
+
+            <article class="edu-entry">
+              <div class="edu-connector" aria-hidden="true">
+                <div class="edu-node edu-node-progress"></div>
+                <div class="edu-line"></div>
+              </div>
+              <div class="panel edu-panel">
+                <div class="ep-header">
+                  <span class="ep-status ep-status-progress">In Progress</span>
+                  <span class="ep-dates">Sep 2022 – Oct 2026</span>
+                </div>
+                <h2 class="ep-title">Bachelor's Degree — Software Technologies and Design</h2>
+                <p class="ep-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  University of Plovdiv "Paisii Hilendarski"
+                </p>
+                <p class="ep-desc">Developing expertise in software technologies, design principles, and logical thinking. Building a strong foundation in software engineering and quality assurance practices.</p>
+              </div>
+            </article>
+
+            <article class="edu-entry">
+              <div class="edu-connector" aria-hidden="true">
+                <div class="edu-node edu-node-done"></div>
+                <div class="edu-line"></div>
+              </div>
+              <div class="panel edu-panel">
+                <div class="ep-header">
+                  <span class="ep-status ep-status-done">Completed</span>
+                  <span class="ep-dates">Jul 2023 – Oct 2025</span>
+                </div>
+                <h2 class="ep-title">QA Engineer Program — Computer Programming</h2>
+                <p class="ep-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  Software University (SoftUni)
+                </p>
+                <p class="ep-desc">Comprehensive 17-month QA Automation Engineer program covering manual and automated testing. Curriculum included QA fundamentals, programming for QA, back-end and front-end test automation, and career development. Hands-on experience with Selenium, Appium, Postman, Swagger, Mocha, Chai, JMeter, K6, NUnit, and RestSharp.</p>
+                <p class="ep-note">Participated in live sessions, collaborative projects, peer reviews, and the IT Career Booster program.</p>
+              </div>
+            </article>
+
+            <article class="edu-entry edu-entry-last">
+              <div class="edu-connector" aria-hidden="true">
+                <div class="edu-node edu-node-done"></div>
+                <div class="edu-line edu-line-fade"></div>
+              </div>
+              <div class="panel edu-panel">
+                <div class="ep-header">
+                  <span class="ep-status ep-status-done">Completed</span>
+                  <span class="ep-dates">Sep 2010 – May 2022</span>
+                </div>
+                <h2 class="ep-title">Secondary School Diploma — Mathematics and Computer Science</h2>
+                <p class="ep-institution">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  "Nesho Bonchev" Secondary School
+                </p>
+                <span class="ep-grade">Grade: Excellent (5.94)</span>
+                <p class="ep-desc">Focused on Mathematics and Informatics. Built strong analytical and logical thinking skills that form the foundation of quality-driven software testing.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
