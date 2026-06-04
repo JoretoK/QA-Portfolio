@@ -5,6 +5,8 @@
    View switching, sidebar, filters, bar animations
    ============================================================ */
 
+let loadingComplete = false;
+
 const sidebar        = document.getElementById('sidebar');
 const sidebarToggle  = document.getElementById('sidebarToggle');
 const sidebarOverlay = document.getElementById('sidebarOverlay');
@@ -43,8 +45,8 @@ function switchView(viewId) {
   // Close sidebar on mobile/tablet
   if (window.innerWidth < 1024) closeSidebar();
 
-  // Trigger bar animations when view becomes visible
-  requestAnimationFrame(() => animateBarsInView(targetView));
+  // Trigger bar animations when view becomes visible (deferred until loading screen gone)
+  if (loadingComplete) requestAnimationFrame(() => animateBarsInView(targetView));
 }
 
 // Wire up sidebar nav items
@@ -65,16 +67,21 @@ document.querySelectorAll('.ql-btn[data-view]').forEach(btn => {
   btn.addEventListener('click', () => switchView(btn.dataset.view));
 });
 
+// Sidebar profile header → dashboard
+const sbProject = document.querySelector('.sb-project');
+if (sbProject) {
+  sbProject.addEventListener('click', e => {
+    if (!e.target.closest('.sb-close')) switchView('dashboard');
+  });
+}
+
 // Handle hash on load
 function initFromHash() {
   const hash = window.location.hash.replace('#', '');
   if (hash && document.getElementById('view-' + hash)) {
     switchView(hash);
-  } else {
-    // Animate bars in the default dashboard view
-    const dashView = document.getElementById('view-dashboard');
-    if (dashView) requestAnimationFrame(() => animateBarsInView(dashView));
   }
+  // Bar animations are triggered by the loading screen dismissal code below
 }
 
 /* ============================================================
@@ -156,13 +163,13 @@ filterBtns.forEach(btn => {
         card.style.display = '';
       } else if (filter === 'closed' && status === 'closed') {
         card.style.display = '';
-      } else if (filter !== 'all') {
+      } else {
         card.style.display = 'none';
       }
     });
 
-    // Update column counts and visibility
     updateColumnCounts();
+    updateColumnVisibility(filter);
   });
 });
 
@@ -172,6 +179,23 @@ function updateColumnCounts() {
     const countEl = col.querySelector('.kc-count');
     if (countEl) countEl.textContent = visible;
   });
+}
+
+function updateColumnVisibility(filter) {
+  const colActive = document.getElementById('col-active');
+  const colDone   = document.getElementById('col-done');
+  if (!colActive || !colDone) return;
+
+  if (filter === 'all') {
+    colActive.style.display = '';
+    colDone.style.display   = '';
+  } else if (filter === 'active') {
+    colActive.style.display = '';
+    colDone.style.display   = 'none';
+  } else if (filter === 'closed') {
+    colActive.style.display = 'none';
+    colDone.style.display   = '';
+  }
 }
 
 /* ============================================================
@@ -200,3 +224,23 @@ certFilterBtns.forEach(btn => {
    INIT
    ============================================================ */
 initFromHash();
+
+// Welcome screen: dismiss after delay, then animate bars in the active view
+(function () {
+  const ls = document.getElementById('loadingScreen');
+  if (!ls) {
+    loadingComplete = true;
+    const active = document.querySelector('.view.view-active');
+    if (active) requestAnimationFrame(() => animateBarsInView(active));
+    return;
+  }
+  setTimeout(() => {
+    ls.classList.add('ls-fade-out');
+    ls.addEventListener('transitionend', () => {
+      ls.style.display = 'none';
+      loadingComplete = true;
+      const active = document.querySelector('.view.view-active');
+      if (active) animateBarsInView(active);
+    }, { once: true });
+  }, 1300);
+}());

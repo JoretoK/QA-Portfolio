@@ -182,6 +182,8 @@ p + p { margin-top: 8px; }
   font-size: 11px; font-weight: 800; color: white;
 }
 .sb-avatar-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; z-index: 1; border-radius: 6px; }
+.sb-project { cursor: pointer; }
+.sb-project:hover { background: rgba(255,255,255,0.05); }
 .sb-proj-info { min-width: 0; }
 .sb-proj-name { font-size: 13px; font-weight: 600; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sb-proj-type { font-size: 11px; color: var(--sb-text); }
@@ -1148,4 +1150,76 @@ p + p { margin-top: 8px; }
 @media (max-width: 320px) {
   .ep-title   { font-size: 0.9375rem; }
   .page-title { font-size: 1rem; }
+}
+
+/* ============================================================
+   WELCOME / LOADING SCREEN
+   ============================================================ */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: #1d2b3a;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.55s ease;
+}
+.loading-screen.ls-fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+.ls-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  animation: lsFadeIn 0.45s ease both;
+}
+@keyframes lsFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ls-logo {
+  width: 60px; height: 60px;
+  border-radius: 14px;
+  background: #0065ff;
+  color: white;
+  font-size: 22px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  box-shadow: 0 0 0 8px rgba(0,101,255,0.15);
+}
+.ls-welcome {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 6px;
+}
+.ls-name {
+  font-size: 26px; font-weight: 800;
+  color: white; letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.ls-role {
+  font-size: 14px; font-weight: 500;
+  color: #b8c5d1;
+}
+.ls-bar {
+  width: 120px; height: 2px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 1px;
+  margin-top: 28px;
+  overflow: hidden;
+}
+.ls-bar-fill {
+  height: 100%; width: 0%;
+  background: #0065ff;
+  border-radius: 1px;
+  animation: lsBarFill 1.1s ease forwards;
+}
+@keyframes lsBarFill {
+  from { width: 0%; }
+  to   { width: 100%; }
 }
