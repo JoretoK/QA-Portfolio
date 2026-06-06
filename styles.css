@@ -851,6 +851,28 @@ p + p { margin-top: 8px; }
 }
 .cert-row:last-child { border-bottom: none; }
 .cert-row:hover { background: #f4f5f7; }
+a.cert-row { color: inherit; text-decoration: none; }
+a.cert-row .cr-name > span {
+  width: fit-content;
+  background-image: linear-gradient(var(--blue), var(--blue));
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 1px;
+  transition: background-size 0.22s ease;
+}
+a.cert-row:hover .cr-name > span { background-size: 100% 1.5px; }
+
+.cfb-cert-link {
+  color: inherit; text-decoration: none;
+  background-image: linear-gradient(var(--blue), var(--blue));
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 2px;
+  transition: background-size 0.22s ease;
+}
+.cfb-cert-link:hover { background-size: 100% 1.5px; }
 .cr-name { display: flex; flex-direction: column; gap: 5px; }
 .cr-name > span { font-size: 13px; font-weight: 600; color: var(--text-h); }
 .cr-icon { width: 14px; height: 14px; color: var(--text-muted); flex-shrink: 0; display: none; }
