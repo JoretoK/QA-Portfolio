@@ -64,6 +64,10 @@
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
             <span>Skills &amp; Tools</span>
           </a>
+          <a class="sn-item" data-view="projects" href="#projects" role="menuitem">
+            <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span>Projects</span>
+          </a>
 
           <div class="sn-section">CREDENTIALS</div>
 
@@ -673,6 +677,227 @@
                 </tfoot>
               </table>
             </div>
+          </div>
+
+          <!-- QA Tech Stack — Inverso -->
+          <div class="panel tech-stack-panel">
+            <div class="panel-head">
+              <span class="panel-title">QA Tech Stack</span>
+              <span class="ts-project-badge">inverso.bg</span>
+            </div>
+            <div class="tech-stack-grid">
+
+              <!-- Languages -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Languages
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>JavaScript (Node.js)</strong><span class="ts-desc">— main language for the E2E test suite</span></li>
+                  <li><strong>C#</strong><span class="ts-desc">— backend/API test automation (.NET)</span></li>
+                  <li><strong>Python</strong><span class="ts-desc">— AI test-generation tooling (Jira → Claude → Google Sheets pipeline)</span></li>
+                  <li><strong>YAML</strong><span class="ts-desc">— feature manifest for coverage tracking and GitHub Actions workflows</span></li>
+                  <li><strong>Bash</strong><span class="ts-desc">— CI scripts and local automation entry points (generate.sh)</span></li>
+                  <li><strong>HTML / CSS / vanilla JS</strong><span class="ts-desc">— custom QA dashboard</span></li>
+                </ul>
+              </div>
+
+              <!-- E2E / UI Testing -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  E2E / UI Testing
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>Playwright</strong><span class="ts-desc">— core E2E framework; covers auth, onboarding, invoices, offers, clients, reports across Chromium / Firefox / WebKit</span></li>
+                  <li><strong>Playwright storageState</strong><span class="ts-desc">— reuses authenticated sessions across tests instead of logging in every time</span></li>
+                  <li><strong>Playwright fixtures</strong><span class="ts-desc">— per-worker authenticated browser contexts for safe parallel runs</span></li>
+                </ul>
+              </div>
+
+              <!-- API / Backend Testing -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  API / Backend Testing
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>NUnit</strong><span class="ts-desc">— test framework for the .NET backend suite</span></li>
+                  <li><strong>RestSharp</strong><span class="ts-desc">— HTTP client for hitting API endpoints in tests</span></li>
+                  <li><strong>FluentAssertions</strong><span class="ts-desc">— readable assertion syntax for API responses</span></li>
+                  <li><strong>Bogus</strong><span class="ts-desc">— generates realistic fake test data</span></li>
+                </ul>
+              </div>
+
+              <!-- CI/CD -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  CI / CD
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>GitHub Actions</strong><span class="ts-desc">— runs tests on macOS, Windows, and Linux; nightly regression run; manual suite-selection triggers; merges multi-platform reports</span></li>
+                </ul>
+              </div>
+
+              <!-- Reporting & Observability -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                  Reporting &amp; Observability
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>Allure Report</strong><span class="ts-desc">— rich test reporting with history/trends and custom failure categorization</span></li>
+                  <li><strong>Chart.js</strong><span class="ts-desc">— powers the visual metrics on the custom QA dashboard</span></li>
+                  <li><strong>Netlify CLI</strong><span class="ts-desc">— auto-deploys the QA dashboard to a live public URL after each CI run</span></li>
+                  <li><strong>Custom Node.js scripts</strong><span class="ts-desc">— merge .NET (TRX) and Playwright (JSON) results into one unified coverage report, tracked against a feature manifest</span></li>
+                </ul>
+              </div>
+
+              <!-- Email Testing -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  Email Testing
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>Mailosaur</strong><span class="ts-desc">— verifies real emails sent by the app (invoices, invites, password reset) using disposable test inboxes</span></li>
+                </ul>
+              </div>
+
+              <!-- AI-Assisted QA Tooling -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/></svg>
+                  AI-Assisted QA Tooling
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>Claude Code (CLI)</strong><span class="ts-desc">— orchestrated programmatically to read actual app source and auto-generate test plans/cases from a Jira ticket</span></li>
+                  <li><strong>Jira REST API</strong><span class="ts-desc">— fetches ticket details to feed the AI generation pipeline</span></li>
+                  <li><strong>Google Sheets / Drive API (OAuth2)</strong><span class="ts-desc">— writes the generated test plan into a shared Google Sheet template</span></li>
+                  <li><strong>Flask + Cloudflare Tunnel</strong><span class="ts-desc">— webhook server that auto-triggers test generation when a Jira ticket changes</span></li>
+                </ul>
+              </div>
+
+              <!-- Tooling -->
+              <div class="ts-category">
+                <h3 class="ts-cat-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  Tooling
+                </h3>
+                <ul class="ts-list">
+                  <li><strong>Git / GitHub</strong><span class="ts-desc">— version control and PR workflow</span></li>
+                  <li><strong>VSCode</strong><span class="ts-desc">— primary IDE, with project-specific run/debug configs</span></li>
+                  <li><strong>dotenv</strong><span class="ts-desc">— manages environment-based config/secrets locally and in CI</span></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ─── PROJECTS ─── -->
+      <div class="view" id="view-projects">
+        <div class="view-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Projects</span></nav>
+
+          <div class="page-header">
+            <div class="ph-left">
+              <h1 class="page-title">Projects</h1>
+              <p class="page-sub">Internal tools built to improve the QA process</p>
+            </div>
+            <div class="ph-right">
+              <span class="coverage-badge">2 Projects</span>
+            </div>
+          </div>
+
+          <div class="project-cards">
+
+            <!-- QA Dashboard -->
+            <div class="project-card" tabindex="0">
+              <div class="pc-header">
+                <div class="pc-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                </div>
+                <div class="pc-title-wrap">
+                  <h2 class="pc-title">QA Dashboard</h2>
+                  <p class="pc-subtitle">Unified test coverage visualization across the entire project</p>
+                </div>
+                <div class="pc-toggle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+              <div class="pc-body">
+                <div class="pc-section">
+                  <h3>Why I built it</h3>
+                  <p>Test results were scattered across different places — Playwright reports, .NET .trx files, separate CI runs — with no single view of how much of the actual product was covered by tests and where the gaps were.</p>
+                </div>
+                <div class="pc-section">
+                  <h3>What problem it solves</h3>
+                  <ul>
+                    <li>Merges results from two different test stacks (Playwright/JS frontend + NUnit/.NET backend) into one unified dashboard.</li>
+                    <li>Shows not just "how many tests pass," but which critical product features actually have coverage — via a risk-weighted score (critical modules count more than low-risk ones).</li>
+                    <li>Surfaces coverage "blind spots" — modules with zero passing tests.</li>
+                    <li>Tracks trends over time (coverage history across runs), instead of each CI run being an isolated snapshot.</li>
+                    <li>Auto-generates and publishes to a live URL after every CI run, so the whole team (QA, devs, PM) can see the current state without going into GitHub Actions.</li>
+                  </ul>
+                </div>
+                <div class="pc-tags">
+                  <span>Playwright</span><span>NUnit</span><span>Chart.js</span><span>Node.js</span><span>Netlify CLI</span><span>GitHub Actions</span><span>Allure</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Test Generator -->
+            <div class="project-card" tabindex="0">
+              <div class="pc-header">
+                <div class="pc-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/></svg>
+                </div>
+                <div class="pc-title-wrap">
+                  <h2 class="pc-title">AI Test Generator</h2>
+                  <p class="pc-subtitle">Auto-generates QA test plans and test cases from Jira tickets</p>
+                </div>
+                <div class="pc-toggle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+              <div class="pc-body">
+                <div class="pc-section">
+                  <h3>Why I built it</h3>
+                  <p>Writing detailed test plans (functional, negative, edge case, regression) for every new feature manually is slow and repetitive, and it's easy to miss cases when working straight from a ticket description instead of the actual implementation.</p>
+                </div>
+                <div class="pc-section">
+                  <h3>What problem it solves</h3>
+                  <ul>
+                    <li>Takes a Jira ticket ID and automatically produces a complete test plan + test cases, instead of a QA writing them by hand from scratch.</li>
+                    <li>Bases the generated tests on the actual code (both backend and frontend repos), not just the ticket text — so it catches edge cases, validations, and error handling that aren't mentioned in the ticket description.</li>
+                    <li>Delivers the result directly into a shared Google Sheet (from a template), ready for the QA to review and execute — no manual formatting or copy-pasting.</li>
+                    <li>Notifies by email when generation is done, so there's no need to babysit the process (which takes a few minutes per ticket).</li>
+                    <li>Can be triggered automatically via a Jira webhook when a ticket changes, removing the manual step entirely.</li>
+                  </ul>
+                </div>
+                <div class="pc-section">
+                  <h3>How it works</h3>
+                  <ol>
+                    <li>You run <code>./generate.sh IN-184</code> (or it triggers automatically via a Jira webhook when the ticket changes).</li>
+                    <li>A Python script fetches the ticket (summary, description, acceptance criteria) from Jira through the Jira REST API.</li>
+                    <li>It builds a detailed QA prompt and feeds it to the Claude Code CLI, pointing it directly at the real backend (Laravel) and frontend (Vue.js) repos so it analyzes the actual implementation, not just the ticket text.</li>
+                    <li>Claude returns structured test cases (functional, negative, edge case, regression), which the script parses into JSON.</li>
+                    <li>The parsed result is written into a new Google Sheet, copied from a shared template, via the Google Sheets/Drive API.</li>
+                    <li>An email notification is sent once the sheet is ready, with a link to it.</li>
+                    <li>Optionally, a small Flask webhook server (exposed via Cloudflare Tunnel) listens for Jira ticket updates and re-triggers the whole flow automatically, ignoring irrelevant changes like status or assignee updates.</li>
+                  </ol>
+                </div>
+                <div class="pc-tags">
+                  <span>Python</span><span>Claude Code CLI</span><span>Jira REST API</span><span>Google Sheets API</span><span>Flask</span><span>Cloudflare Tunnel</span><span>Bash</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

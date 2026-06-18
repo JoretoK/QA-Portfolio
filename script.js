@@ -221,6 +221,22 @@ certFilterBtns.forEach(btn => {
 });
 
 /* ============================================================
+   PROJECTS — EXPAND / COLLAPSE CARDS
+   ============================================================ */
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('click', e => {
+    if (e.target.closest('a')) return;
+    card.classList.toggle('pc-open');
+  });
+  card.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.classList.toggle('pc-open');
+    }
+  });
+});
+
+/* ============================================================
    INIT
    ============================================================ */
 initFromHash();
