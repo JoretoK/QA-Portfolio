@@ -810,7 +810,7 @@
               <p class="page-sub">Internal tools built to improve the QA process</p>
             </div>
             <div class="ph-right">
-              <span class="coverage-badge">2 Projects</span>
+              <span class="coverage-badge">3 Projects</span>
             </div>
           </div>
 
@@ -894,6 +894,55 @@
                 </div>
                 <div class="pc-tags">
                   <span>Python</span><span>Claude Code CLI</span><span>Jira REST API</span><span>Google Sheets API</span><span>Flask</span><span>Cloudflare Tunnel</span><span>Bash</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- QA Test Copilot -->
+            <div class="project-card" tabindex="0">
+              <div class="pc-header">
+                <div class="pc-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+                </div>
+                <div class="pc-title-wrap">
+                  <h2 class="pc-title">QA Test Copilot</h2>
+                  <p class="pc-subtitle">A custom /qa-test Claude Code command that code-reviews, live-tests, and documents a ticket end-to-end</p>
+                </div>
+                <div class="pc-toggle">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+              </div>
+              <div class="pc-body">
+                <div class="pc-section">
+                  <h3>Why I built it</h3>
+                  <p>Testing a ticket end-to-end always meant repeating the same tedious sequence by hand: reading the code, checking the database, hitting the API, testing the UI, then re-testing on the mobile app — and writing up the findings in a way a developer could actually act on took just as long as the testing itself.</p>
+                </div>
+                <div class="pc-section">
+                  <h3>What problem it solves</h3>
+                  <ul>
+                    <li>Turns a single command, <code>/qa-test 19</code>, into a full QA pass on a specific ticket: pulls the latest code, looks up the ticket number and its description, and locates exactly where and how it was implemented in the Laravel codebase.</li>
+                    <li>Runs a detailed code review of the change first — including how it touches other modules — to catch logic and integration issues before any test is even executed.</li>
+                    <li>Runs real functional tests two ways on the backend: direct API requests plus Laravel Tinker and database checks, and separately drives the UI live through Playwright MCP.</li>
+                    <li>Extends the same testing pass to the mobile app by launching an Android Studio emulator and running live test flows, taking screenshots along the way to track progress and decide what to check next.</li>
+                    <li>Writes every issue it finds into a developer-ready Markdown report: what's broken, exact steps to reproduce, the actual effect, and why it's happening — everything needed to fix it without back-and-forth.</li>
+                    <li>Persists everything into a session Markdown file, so a QA pass can be resumed exactly where it left off instead of losing context between sessions.</li>
+                  </ul>
+                </div>
+                <div class="pc-section">
+                  <h3>How it works</h3>
+                  <ol>
+                    <li>You type <code>/qa-test 19</code> in Claude Code, where 19 is the ticket number.</li>
+                    <li>Claude pulls the latest changes from the repo and looks up ticket #19's description in the tracker.</li>
+                    <li>It searches the PHP/Laravel codebase to find exactly where and how the ticket was implemented.</li>
+                    <li>It code-reviews that implementation, tracing how it interacts with other modules to flag risky or broken integrations before testing starts.</li>
+                    <li>It runs backend tests via direct API calls, Laravel Tinker, and database queries, then runs live UI tests through Playwright MCP.</li>
+                    <li>It launches the mobile app in an Android Studio emulator and runs live test flows, capturing screenshots to track state and guide the next test step.</li>
+                    <li>Every issue found is written into a Markdown report formatted for handoff: the bug, reproduction steps, the effect, and the root cause.</li>
+                    <li>Everything is saved into a session Markdown file, so the QA process for that ticket can be picked up later without losing history.</li>
+                  </ol>
+                </div>
+                <div class="pc-tags">
+                  <span>PHP</span><span>Laravel</span><span>Claude Code</span><span>Playwright MCP</span><span>Android Studio</span><span>Laravel Tinker</span><span>REST API</span><span>Markdown</span>
                 </div>
               </div>
             </div>
