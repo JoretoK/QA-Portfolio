@@ -1,7 +1,7 @@
 'use strict';
 
 /* ============================================================
-   QA WORKSPACE — Application Script
+   QA WORKSPACE - Application Script
    View switching, sidebar, filters, bar animations
    ============================================================ */
 
@@ -112,7 +112,7 @@ if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
 
 sidebarOverlay.addEventListener('click', closeSidebar);
 
-// On desktop (≥1024px) sidebar is always visible — ensure no leftover open state
+// On desktop (≥1024px) sidebar is always visible - ensure no leftover open state
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 1024) {
     sidebar.classList.remove('sidebar-open');
@@ -145,7 +145,7 @@ function animateBarsInView(container) {
 }
 
 /* ============================================================
-   WORK BOARD — STATUS FILTER
+   WORK BOARD - STATUS FILTER
    ============================================================ */
 const filterBtns = document.querySelectorAll('.btf-btn[data-filter]');
 
@@ -199,7 +199,7 @@ function updateColumnVisibility(filter) {
 }
 
 /* ============================================================
-   CERTIFICATIONS — ISSUER FILTER
+   CERTIFICATIONS - ISSUER FILTER
    ============================================================ */
 const certFilterBtns = document.querySelectorAll('.cf-btn[data-cf]');
 
@@ -221,7 +221,7 @@ certFilterBtns.forEach(btn => {
 });
 
 /* ============================================================
-   PROJECTS — EXPAND / COLLAPSE CARDS
+   PROJECTS - EXPAND / COLLAPSE CARDS
    ============================================================ */
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', e => {
