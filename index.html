@@ -124,7 +124,7 @@
             <div class="ph-right">
               <span class="status-available">
                 <span class="avail-dot" aria-hidden="true"></span>
-                Currently Employed
+                Open to Work
               </span>
             </div>
           </div>
@@ -145,7 +145,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               </div>
               <div class="metric-body">
-                <div class="metric-val">2</div>
+                <div class="metric-val">0</div>
                 <div class="metric-lbl">Active Roles</div>
               </div>
             </div>
@@ -211,6 +211,14 @@
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
+                        <div class="af-title">Quality Assurance Specialist</div>
+                        <div class="af-sub">Inverso.bg &amp; Voidweb</div>
+                        <div class="af-date">Jul 2024 - Sep 2026</div>
+                      </div>
+                    </div>
+                    <div class="af-item">
+                      <div class="af-dot af-dot-green"></div>
+                      <div class="af-content">
                         <div class="af-title">Bachelor's Degree - Completed</div>
                         <div class="af-sub">University of Plovdiv</div>
                         <div class="af-date">Jul 2026</div>
@@ -222,14 +230,6 @@
                         <div class="af-title">QA Automation Engineer Diploma</div>
                         <div class="af-sub">Software University (SoftUni)</div>
                         <div class="af-date">Oct 2025</div>
-                      </div>
-                    </div>
-                    <div class="af-item">
-                      <div class="af-dot af-dot-blue"></div>
-                      <div class="af-content">
-                        <div class="af-title">Quality Assurance Specialist</div>
-                        <div class="af-sub">Inverso.bg &amp; Voidweb</div>
-                        <div class="af-date">Jul 2024 - Present</div>
                       </div>
                     </div>
                     <div class="af-item">
@@ -270,11 +270,11 @@
                   <div class="status-detail-list">
                     <div class="sdl-row">
                       <span class="sdl-key">Availability</span>
-                      <span class="sdl-val"><span class="badge-avail">Currently Employed</span></span>
+                      <span class="sdl-val"><span class="badge-avail">Open to Work</span></span>
                     </div>
                     <div class="sdl-row">
                       <span class="sdl-key">Location</span>
-                      <span class="sdl-val">Bulgaria</span>
+                      <span class="sdl-val">Panagyurishte / Plovdiv, Bulgaria</span>
                     </div>
                     <div class="sdl-row">
                       <span class="sdl-key">Work Type</span>
@@ -400,7 +400,7 @@
               </div>
               <div class="isd-group">
                 <div class="isd-label">Status</div>
-                <div class="isd-val"><span class="badge-avail">Currently Employed</span></div>
+                <div class="isd-val"><span class="badge-avail">Open to Work</span></div>
               </div>
               <div class="isd-group">
                 <div class="isd-label">Priority</div>
@@ -478,7 +478,7 @@
               <button class="btf-btn" data-filter="active">Active</button>
               <button class="btf-btn" data-filter="closed">Closed</button>
             </div>
-            <div class="bt-info">3 issues &nbsp;·&nbsp; 2 active &nbsp;·&nbsp; 1 closed</div>
+            <div class="bt-info">3 issues &nbsp;·&nbsp; 0 active &nbsp;·&nbsp; 3 closed</div>
           </div>
 
           <div class="kanban" role="list" aria-label="Work board columns">
@@ -488,12 +488,24 @@
               <div class="kc-header">
                 <span class="kc-dot kc-dot-blue" aria-hidden="true"></span>
                 <span class="kc-name">In Progress</span>
-                <span class="kc-count" aria-label="2 issues">2</span>
+                <span class="kc-count" aria-label="0 issues">0</span>
+              </div>
+              <div class="kc-cards">
+
+              </div>
+            </div>
+
+            <!-- DONE column -->
+            <div class="kanban-col" role="listitem" id="col-done">
+              <div class="kc-header">
+                <span class="kc-dot kc-dot-green" aria-hidden="true"></span>
+                <span class="kc-name">Done</span>
+                <span class="kc-count" aria-label="3 issues">3</span>
               </div>
               <div class="kc-cards">
 
                 <!-- GK-001 -->
-                <article class="issue-card" data-status="active">
+                <article class="issue-card" data-status="closed">
                   <div class="ic-top-row">
                     <div class="ic-meta">
                       <span class="ic-type-story" aria-label="Story type" title="Story"></span>
@@ -506,19 +518,19 @@
                     <span class="epic-dot" style="--epic-c:#5243aa" aria-hidden="true"></span>
                     <span class="epic-name">Inverso.bg</span>
                   </div>
-                  <div class="ic-dates">Jul 2024 - Present &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
+                  <div class="ic-dates">Jul 2024 - Sep 2026 &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
                   <p class="ic-desc">First invoicing platform with integrated AI in Bulgaria. Functional, performance, and security testing.</p>
                   <div class="ic-tags" aria-label="Skills">
                     <span>Playwright</span><span>JavaScript</span><span>API Testing</span><span>C# / .NET</span><span>Allure</span>
                   </div>
                   <div class="ic-footer">
                     <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
-                    <span class="ic-status-badge ic-badge-active">Active</span>
+                    <span class="ic-status-badge ic-badge-done">Closed</span>
                   </div>
                 </article>
 
                 <!-- GK-002 -->
-                <article class="issue-card" data-status="active">
+                <article class="issue-card" data-status="closed">
                   <div class="ic-top-row">
                     <div class="ic-meta">
                       <span class="ic-type-story" aria-label="Story type" title="Story"></span>
@@ -531,28 +543,16 @@
                     <span class="epic-dot" style="--epic-c:#0065ff" aria-hidden="true"></span>
                     <span class="epic-name">Voidweb</span>
                   </div>
-                  <div class="ic-dates">Jul 2024 - Present &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
+                  <div class="ic-dates">Jul 2024 - Sep 2026 &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
                   <p class="ic-desc">Comprehensive testing methodologies across multiple projects and testing domains.</p>
                   <div class="ic-tags" aria-label="Skills">
                     <span>GitHub</span><span>Cross-browser</span><span>Test Planning</span><span>Mobile Testing</span>
                   </div>
                   <div class="ic-footer">
                     <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
-                    <span class="ic-status-badge ic-badge-active">Active</span>
+                    <span class="ic-status-badge ic-badge-done">Closed</span>
                   </div>
                 </article>
-
-              </div>
-            </div>
-
-            <!-- DONE column -->
-            <div class="kanban-col" role="listitem" id="col-done">
-              <div class="kc-header">
-                <span class="kc-dot kc-dot-green" aria-hidden="true"></span>
-                <span class="kc-name">Done</span>
-                <span class="kc-count" aria-label="1 issue">1</span>
-              </div>
-              <div class="kc-cards">
 
                 <!-- GK-003 -->
                 <article class="issue-card" data-status="closed">
