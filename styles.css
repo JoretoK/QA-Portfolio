@@ -142,6 +142,35 @@ p + p { margin-top: 8px; }
 }
 .tb-avatar-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 
+/* Language switch (EN / BG) */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  background: var(--page-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.lang-btn {
+  min-width: 34px;
+  height: 26px;
+  padding: 0 8px;
+  border-radius: var(--radius);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-sub);
+  transition: background var(--t), color var(--t), box-shadow var(--t);
+}
+.lang-btn:hover { color: var(--text-h); }
+.lang-btn[aria-pressed="true"] {
+  background: var(--card-bg);
+  color: var(--blue-text);
+  box-shadow: var(--shadow-sm);
+  cursor: default;
+}
+
 /* ============================================================
    SIDEBAR
    ============================================================ */
@@ -862,7 +891,7 @@ p + p { margin-top: 8px; }
   padding: 0 20px;
 }
 .project-card.pc-open .pc-body {
-  max-height: 2000px;
+  max-height: 4000px;
   padding: 0 20px 20px;
 }
 
@@ -1117,6 +1146,9 @@ a.cert-row:hover .cr-name > span { background-size: 100% 1.5px; }
 
   .cert-featured-body { grid-template-columns: 1fr; gap: 20px; }
   .cfb-right { flex-direction: row; justify-content: flex-start; }
+
+  /* Language switch: larger tap targets on touch layouts */
+  .lang-btn { min-width: 40px; height: 32px; font-size: 0.75rem; }
 }
 
 /* ── Below 768px — mobile landscape / small tablet ── */
@@ -1219,6 +1251,9 @@ a.cert-row:hover .cr-name > span { background-size: 100% 1.5px; }
   .skills-table .st-bar-track { height: 8px; border-radius: 4px; }
   .skills-table td            { padding: 10px 14px; }
   .skills-table .st-bar-cell  { padding: 10px 14px; }
+
+  /* Longer Bulgarian domain names wrap instead of squeezing the bar column */
+  html:lang(bg) .st-domain { white-space: normal; }
 }
 
 /* ── Below 480px — phone ── */
@@ -1288,6 +1323,7 @@ a.cert-row:hover .cr-name > span { background-size: 100% 1.5px; }
   .issue-section { padding: 12px; }
   .panel-body    { padding: 12px 14px; }
   .ms-name       { width: 88px; font-size: 0.625rem; }
+  html:lang(bg) .ms-name { width: 96px; }
 }
 
 /* ── 320px ── */

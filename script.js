@@ -177,7 +177,9 @@ function updateColumnCounts() {
   document.querySelectorAll('.kanban-col').forEach(col => {
     const visible = col.querySelectorAll('.issue-card:not([style*="none"])').length;
     const countEl = col.querySelector('.kc-count');
-    if (countEl) countEl.textContent = visible;
+    if (!countEl) return;
+    countEl.textContent = visible;
+    countEl.setAttribute('aria-label', i18n.t('board.issueCount', { count: visible }));
   });
 }
 
@@ -237,8 +239,30 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 /* ============================================================
+   LANGUAGE TOGGLE (EN / BG)
+   Text swaps in place, so the current view, filters and open
+   project cards are all preserved.
+   ============================================================ */
+const langBtns = document.querySelectorAll('.lang-btn[data-lang]');
+
+function syncLangButtons(lang) {
+  langBtns.forEach(btn => btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang)));
+}
+
+langBtns.forEach(btn => {
+  btn.addEventListener('click', () => i18n.setLanguage(btn.dataset.lang));
+});
+
+document.addEventListener('i18n:change', e => {
+  syncLangButtons(e.detail.lang);
+  updateColumnCounts();
+});
+
+/* ============================================================
    INIT
    ============================================================ */
+syncLangButtons(i18n.getLanguage());
+updateColumnCounts();
 initFromHash();
 
 // Welcome screen: dismiss after delay, then animate bars in the active view

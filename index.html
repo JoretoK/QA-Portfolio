@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Georgi Koleshanski - QA Engineer workspace. Manual and automated testing specialist." />
+  <meta name="description" content="Georgi Koleshanski - QA Engineer workspace. Manual and automated testing specialist." data-i18n-attr="content:meta.description" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <title>Georgi Koleshanski | QA Workspace</title>
+  <title data-i18n="meta.title">Georgi Koleshanski | QA Workspace</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="app">
@@ -13,12 +13,18 @@
   <!-- ═══ TOP BAR ═══ -->
   <header class="topbar" role="banner">
     <div class="tb-left">
-      <button class="tb-toggle" id="sidebarToggle" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="sidebar">
+      <button class="tb-toggle" id="sidebarToggle" data-i18n-attr="aria-label:a11y.toggleSidebar" aria-expanded="false" aria-controls="sidebar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <div class="tb-brand">
         <div class="tb-logo" aria-hidden="true">GK</div>
-        <span class="tb-name">QA Workspace</span>
+        <span class="tb-name" data-i18n="common.brand"></span>
+      </div>
+    </div>
+    <div class="tb-right">
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.language">
+        <button type="button" class="lang-btn" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="bg" lang="bg" aria-label="Български" aria-pressed="false">BG</button>
       </div>
     </div>
   </header>
@@ -27,7 +33,7 @@
   <div class="app-body">
 
     <!-- ═══ SIDEBAR ═══ -->
-    <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+    <aside class="sidebar" id="sidebar" data-i18n-attr="aria-label:a11y.primaryNav">
       <div class="sidebar-inner">
 
         <div class="sb-project">
@@ -36,10 +42,10 @@
             <img src="avatar.jpg" alt="" class="sb-avatar-img" onerror="this.style.display='none'" />
           </div>
           <div class="sb-proj-info">
-            <div class="sb-proj-name">Georgi Koleshanski</div>
-            <div class="sb-proj-type">QA Engineer</div>
+            <div class="sb-proj-name" data-i18n="common.name"></div>
+            <div class="sb-proj-type" data-i18n="common.role"></div>
           </div>
-          <button class="sb-close" id="sidebarClose" aria-label="Close navigation">
+          <button class="sb-close" id="sidebarClose" data-i18n-attr="aria-label:a11y.closeNav">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
         </div>
@@ -47,44 +53,44 @@
         <nav class="sb-nav" role="navigation">
           <a class="sn-item active" data-view="dashboard" href="#dashboard" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-            <span>Dashboard</span>
+            <span data-i18n="nav.dashboard"></span>
           </a>
           <a class="sn-item" data-view="profile" href="#profile" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span>Profile</span>
+            <span data-i18n="nav.profile"></span>
           </a>
 
-          <div class="sn-section">WORK</div>
+          <div class="sn-section" data-i18n="nav.sectionWork"></div>
 
           <a class="sn-item" data-view="board" href="#board" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="5" height="18" rx="1"/><rect x="10" y="3" width="5" height="14" rx="1"/><rect x="17" y="3" width="4" height="10" rx="1"/></svg>
-            <span>Work Board</span>
+            <span data-i18n="nav.board"></span>
           </a>
           <a class="sn-item" data-view="skills" href="#skills" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            <span>Skills &amp; Tools</span>
+            <span data-i18n="nav.skills"></span>
           </a>
           <a class="sn-item" data-view="projects" href="#projects" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span>Projects</span>
+            <span data-i18n="nav.projects"></span>
           </a>
 
-          <div class="sn-section">CREDENTIALS</div>
+          <div class="sn-section" data-i18n="nav.sectionCredentials"></div>
 
           <a class="sn-item" data-view="certs" href="#certs" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-            <span>Certifications</span>
+            <span data-i18n="nav.certs"></span>
           </a>
           <a class="sn-item" data-view="education" href="#education" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            <span>Education</span>
+            <span data-i18n="nav.education"></span>
           </a>
 
-          <div class="sn-section">CONNECT</div>
+          <div class="sn-section" data-i18n="nav.sectionConnect"></div>
 
           <a class="sn-item" href="Georgi-Koleshanski-CV.pdf" download="Georgi-Koleshanski-CV.pdf" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span>Download CV</span>
+            <span data-i18n="nav.downloadCv"></span>
           </a>
           <a class="sn-item" href="https://github.com/JoretoK" target="_blank" rel="noopener noreferrer" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
@@ -98,7 +104,7 @@
           </a>
           <a class="sn-item" href="mailto:joretok79@gmail.com" role="menuitem">
             <svg class="sn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            <span>Email</span>
+            <span data-i18n="nav.email"></span>
             <svg class="sn-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
         </nav>
@@ -114,17 +120,17 @@
       <!-- ─── DASHBOARD ─── -->
       <div class="view view-active" id="view-dashboard">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Dashboard</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.dashboard"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Dashboard</h1>
-              <p class="page-sub">QA Engineering Overview</p>
+              <h1 class="page-title" data-i18n="nav.dashboard"></h1>
+              <p class="page-sub" data-i18n="dashboard.subtitle"></p>
             </div>
             <div class="ph-right">
               <span class="status-available">
                 <span class="avail-dot" aria-hidden="true"></span>
-                Open to Work
+                <span data-i18n="common.openToWork"></span>
               </span>
             </div>
           </div>
@@ -137,7 +143,7 @@
               </div>
               <div class="metric-body">
                 <div class="metric-val">2+</div>
-                <div class="metric-lbl">Years Experience</div>
+                <div class="metric-lbl" data-i18n="dashboard.metrics.experience"></div>
               </div>
             </div>
             <div class="metric-card">
@@ -146,7 +152,7 @@
               </div>
               <div class="metric-body">
                 <div class="metric-val">0</div>
-                <div class="metric-lbl">Active Roles</div>
+                <div class="metric-lbl" data-i18n="dashboard.metrics.activeRoles"></div>
               </div>
             </div>
             <div class="metric-card">
@@ -155,7 +161,7 @@
               </div>
               <div class="metric-body">
                 <div class="metric-val">12</div>
-                <div class="metric-lbl">Certifications</div>
+                <div class="metric-lbl" data-i18n="dashboard.metrics.certifications"></div>
               </div>
             </div>
             <div class="metric-card">
@@ -164,7 +170,7 @@
               </div>
               <div class="metric-body">
                 <div class="metric-val">12+</div>
-                <div class="metric-lbl">Testing Tools</div>
+                <div class="metric-lbl" data-i18n="dashboard.metrics.tools"></div>
               </div>
             </div>
           </div>
@@ -176,7 +182,7 @@
               <!-- Profile panel -->
               <div class="panel">
                 <div class="panel-head">
-                  <span class="panel-title">Profile Overview</span>
+                  <span class="panel-title" data-i18n="dashboard.profile.title"></span>
                 </div>
                 <div class="panel-body">
                   <div class="profile-summary">
@@ -185,19 +191,19 @@
                       <img src="avatar.jpg" alt="" class="ps-avatar-img" onerror="this.style.display='none'" />
                     </div>
                     <div class="ps-info">
-                      <h2 class="ps-name">Georgi Koleshanski</h2>
-                      <span class="ps-role-chip">QA Engineer</span>
+                      <h2 class="ps-name" data-i18n="common.name"></h2>
+                      <span class="ps-role-chip" data-i18n="common.role"></span>
                       <div class="ps-meta">
                         <span>
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                          Bulgaria, On-site
+                          <span data-i18n="common.locationWorkMode"></span>
                         </span>
                         <span>
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                          Bulgarian · English · Russian
+                          <span data-i18n="dashboard.profile.languages"></span>
                         </span>
                       </div>
-                      <p class="ps-bio">2+ years delivering reliable software through comprehensive manual and automated testing. Specialized in test strategy, automation frameworks, and quality advocacy across the full SDLC.</p>
+                      <p class="ps-bio" data-i18n="dashboard.profile.bio"></p>
                     </div>
                   </div>
                 </div>
@@ -205,47 +211,47 @@
 
               <!-- Activity timeline panel -->
               <div class="panel">
-                <div class="panel-head"><span class="panel-title">Career Timeline</span></div>
+                <div class="panel-head"><span class="panel-title" data-i18n="dashboard.timeline.title"></span></div>
                 <div class="panel-body panel-body-compact">
                   <div class="activity-feed">
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
-                        <div class="af-title">Quality Assurance Specialist</div>
+                        <div class="af-title" data-i18n="common.qaSpecialist"></div>
                         <div class="af-sub">Inverso.bg &amp; Voidweb</div>
-                        <div class="af-date">Jul 2024 - Sep 2026</div>
+                        <div class="af-date" data-i18n-date="2024-07/2026-09"></div>
                       </div>
                     </div>
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
-                        <div class="af-title">Bachelor's Degree - Software Technologies and Design</div>
-                        <div class="af-sub">University of Plovdiv</div>
-                        <div class="af-date">Jul 2026</div>
+                        <div class="af-title" data-i18n="common.bachelor"></div>
+                        <div class="af-sub" data-i18n="common.puShort"></div>
+                        <div class="af-date" data-i18n-date="2026-07"></div>
                       </div>
                     </div>
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
-                        <div class="af-title">QA Automation Engineer Diploma</div>
-                        <div class="af-sub">Software University (SoftUni)</div>
-                        <div class="af-date">Oct 2025</div>
+                        <div class="af-title" data-i18n="common.qaDiploma"></div>
+                        <div class="af-sub" data-i18n="common.softuni"></div>
+                        <div class="af-date" data-i18n-date="2025-10"></div>
                       </div>
                     </div>
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
-                        <div class="af-title">CCTV Camera Installer</div>
+                        <div class="af-title" data-i18n="common.cctvInstaller"></div>
                         <div class="af-sub">Systera Technology Ltd</div>
-                        <div class="af-date">Jul - Aug 2022</div>
+                        <div class="af-date" data-i18n-date="2022-07/2022-08"></div>
                       </div>
                     </div>
                     <div class="af-item">
                       <div class="af-dot af-dot-green"></div>
                       <div class="af-content">
-                        <div class="af-title">Secondary School Diploma - Completed</div>
-                        <div class="af-sub">"Nesho Bonchev" Secondary School</div>
-                        <div class="af-date">May 2022</div>
+                        <div class="af-title" data-i18n="dashboard.timeline.school"></div>
+                        <div class="af-sub" data-i18n="common.school"></div>
+                        <div class="af-date" data-i18n-date="2022-05"></div>
                       </div>
                     </div>
                   </div>
@@ -257,28 +263,28 @@
 
               <!-- Status panel -->
               <div class="panel">
-                <div class="panel-head"><span class="panel-title">Status</span></div>
+                <div class="panel-head"><span class="panel-title" data-i18n="common.status"></span></div>
                 <div class="panel-body">
                   <div class="status-detail-list">
                     <div class="sdl-row">
-                      <span class="sdl-key">Availability</span>
-                      <span class="sdl-val"><span class="badge-avail">Open to Work</span></span>
+                      <span class="sdl-key" data-i18n="dashboard.status.availability"></span>
+                      <span class="sdl-val"><span class="badge-avail" data-i18n="common.openToWork"></span></span>
                     </div>
                     <div class="sdl-row">
-                      <span class="sdl-key">Location</span>
-                      <span class="sdl-val">Panagyurishte / Plovdiv, Bulgaria</span>
+                      <span class="sdl-key" data-i18n="common.location"></span>
+                      <span class="sdl-val" data-i18n="dashboard.status.locationValue"></span>
                     </div>
                     <div class="sdl-row">
-                      <span class="sdl-key">Work Type</span>
-                      <span class="sdl-val">On-site</span>
+                      <span class="sdl-key" data-i18n="dashboard.status.workType"></span>
+                      <span class="sdl-val" data-i18n="dashboard.status.workMode"></span>
                     </div>
                     <div class="sdl-row">
-                      <span class="sdl-key">Focus Area</span>
-                      <span class="sdl-val">Manual &amp; Automated QA</span>
+                      <span class="sdl-key" data-i18n="dashboard.status.focusArea"></span>
+                      <span class="sdl-val" data-i18n="dashboard.status.focusValue"></span>
                     </div>
                     <div class="sdl-row">
-                      <span class="sdl-key">SDLC Role</span>
-                      <span class="sdl-val">QA Specialist</span>
+                      <span class="sdl-key" data-i18n="dashboard.status.sdlcRole"></span>
+                      <span class="sdl-val" data-i18n="dashboard.status.sdlcValue"></span>
                     </div>
                   </div>
                 </div>
@@ -287,30 +293,30 @@
               <!-- Quick skill summary panel -->
               <div class="panel">
                 <div class="panel-head">
-                  <span class="panel-title">Skill Coverage</span>
+                  <span class="panel-title" data-i18n="dashboard.skills.title"></span>
                   <span class="panel-badge">97%</span>
                 </div>
                 <div class="panel-body panel-body-compact">
                   <div class="mini-skills">
-                    <div class="ms-row"><span class="ms-name">Automation Tools</span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
-                    <div class="ms-row"><span class="ms-name">API &amp; Performance</span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
-                    <div class="ms-row"><span class="ms-name">Testing Types</span><div class="ms-bar"><div class="ms-fill" data-w="100"></div></div><span class="ms-pct">100%</span></div>
-                    <div class="ms-row"><span class="ms-name">Languages</span><div class="ms-bar"><div class="ms-fill" data-w="85"></div></div><span class="ms-pct">85%</span></div>
-                    <div class="ms-row"><span class="ms-name">Reporting</span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
-                    <div class="ms-row"><span class="ms-name">Process</span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.automation"></span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.api"></span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.types"></span><div class="ms-bar"><div class="ms-fill" data-w="100"></div></div><span class="ms-pct">100%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.languages"></span><div class="ms-bar"><div class="ms-fill" data-w="85"></div></div><span class="ms-pct">85%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.reporting"></span><div class="ms-bar"><div class="ms-fill" data-w="95"></div></div><span class="ms-pct">95%</span></div>
+                    <div class="ms-row"><span class="ms-name" data-i18n="dashboard.skills.process"></span><div class="ms-bar"><div class="ms-fill" data-w="98"></div></div><span class="ms-pct">98%</span></div>
                   </div>
                 </div>
               </div>
 
               <!-- Quick access -->
               <div class="panel">
-                <div class="panel-head"><span class="panel-title">Quick Access</span></div>
+                <div class="panel-head"><span class="panel-title" data-i18n="dashboard.quick.title"></span></div>
                 <div class="panel-body panel-body-compact">
                   <div class="quick-links">
-                    <button class="ql-btn" data-view="board">Work Board <span class="ql-count">3 issues</span></button>
-                    <button class="ql-btn" data-view="certs">Certifications <span class="ql-count">12 credentials</span></button>
-                    <button class="ql-btn" data-view="skills">Skills &amp; Tools <span class="ql-count">22 skills</span></button>
-                    <button class="ql-btn" data-view="education">Education <span class="ql-count">3 entries</span></button>
+                    <button class="ql-btn" data-view="board"><span data-i18n="nav.board"></span> <span class="ql-count" data-i18n="dashboard.quick.issues"></span></button>
+                    <button class="ql-btn" data-view="certs"><span data-i18n="nav.certs"></span> <span class="ql-count" data-i18n="dashboard.quick.credentials"></span></button>
+                    <button class="ql-btn" data-view="skills"><span data-i18n="nav.skills"></span> <span class="ql-count" data-i18n="dashboard.quick.skills"></span></button>
+                    <button class="ql-btn" data-view="education"><span data-i18n="nav.education"></span> <span class="ql-count" data-i18n="dashboard.quick.entries"></span></button>
                   </div>
                 </div>
               </div>
@@ -323,119 +329,114 @@
       <!-- ─── PROFILE / ABOUT ─── -->
       <div class="view" id="view-profile">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Profile</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.profile"></span></nav>
 
           <div class="issue-header-bar">
             <div class="ihb-left">
-              <span class="issue-type-chip story">Story</span>
+              <span class="issue-type-chip story" data-i18n="profile.story"></span>
               <span class="issue-key-label">GK-PROFILE</span>
             </div>
           </div>
 
-          <h1 class="issue-page-title">Georgi Koleshanski</h1>
-          <p class="issue-page-sub">QA Engineer - Professional Profile</p>
+          <h1 class="issue-page-title" data-i18n="common.name"></h1>
+          <p class="issue-page-sub" data-i18n="profile.subtitle"></p>
 
           <div class="issue-layout">
             <!-- Main content -->
             <div class="issue-main">
               <div class="issue-section">
-                <h2 class="is-heading">Description</h2>
+                <h2 class="is-heading" data-i18n="profile.description"></h2>
                 <div class="is-body">
-                  <p>QA Engineer with 2+ years of experience in both Manual and Automated Software Testing, focused on delivering reliable, high-quality software products.</p>
-                  <p>Experienced in designing, executing, and maintaining test cases, identifying defects, and collaborating closely with development teams throughout the software development lifecycle.</p>
-                  <p>Passionate about improving software quality through efficient testing strategies, automation, and continuous process improvement.</p>
+                  <p data-i18n="profile.p1"></p>
+                  <p data-i18n="profile.p2"></p>
+                  <p data-i18n="profile.p3"></p>
                 </div>
               </div>
 
               <div class="issue-section">
-                <h2 class="is-heading">Test Case Summary</h2>
+                <h2 class="is-heading" data-i18n="profile.tc.heading"></h2>
                 <div class="tc-wrap">
                   <div class="tc-toolbar">
                     <span class="tc-label">test-suite: candidate-profile</span>
-                    <span class="tc-runinfo">Last run: Present &nbsp;·&nbsp; 6/6 passed</span>
+                    <span class="tc-runinfo" data-i18n="profile.tc.runInfo"></span>
                   </div>
                   <div class="tc-scroll">
-                    <table class="tc-table" aria-label="Candidate profile test cases">
+                    <table class="tc-table" data-i18n-attr="aria-label:profile.tc.tableAria">
                       <thead>
                         <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Objective</th>
-                          <th scope="col">Result</th>
-                          <th scope="col">Status</th>
+                          <th scope="col" data-i18n="profile.tc.colId"></th>
+                          <th scope="col" data-i18n="profile.tc.colObjective"></th>
+                          <th scope="col" data-i18n="profile.tc.colResult"></th>
+                          <th scope="col" data-i18n="common.status"></th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr><td class="tc-id">TC-001</td><td class="tc-obj">QA Experience</td><td class="tc-res">2+ yrs · Manual &amp; Automation</td><td><span class="tc-pass">Pass</span></td></tr>
-                        <tr><td class="tc-id">TC-002</td><td class="tc-obj">Automation Frameworks</td><td class="tc-res">Playwright · Selenium · Appium</td><td><span class="tc-pass">Pass</span></td></tr>
-                        <tr><td class="tc-id">TC-003</td><td class="tc-obj">API &amp; Performance Testing</td><td class="tc-res">Postman · JMeter · K6</td><td><span class="tc-pass">Pass</span></td></tr>
-                        <tr><td class="tc-id">TC-004</td><td class="tc-obj">Test Planning &amp; Strategy</td><td class="tc-res">Full SDLC Collaboration</td><td><span class="tc-pass">Pass</span></td></tr>
-                        <tr><td class="tc-id">TC-005</td><td class="tc-obj">Continuous Certification</td><td class="tc-res">12 Certifications Earned</td><td><span class="tc-pass">Pass</span></td></tr>
-                        <tr><td class="tc-id">TC-006</td><td class="tc-obj">Communication</td><td class="tc-res">Bulgarian (Native) · English (Pro)</td><td><span class="tc-pass">Pass</span></td></tr>
+                        <tr><td class="tc-id">TC-001</td><td class="tc-obj" data-i18n="profile.tc.experience"></td><td class="tc-res" data-i18n="profile.tc.experienceRes"></td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
+                        <tr><td class="tc-id">TC-002</td><td class="tc-obj" data-i18n="profile.tc.frameworks"></td><td class="tc-res">Playwright · Selenium · Appium</td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
+                        <tr><td class="tc-id">TC-003</td><td class="tc-obj" data-i18n="profile.tc.api"></td><td class="tc-res">Postman · JMeter · K6</td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
+                        <tr><td class="tc-id">TC-004</td><td class="tc-obj" data-i18n="profile.tc.planning"></td><td class="tc-res" data-i18n="profile.tc.planningRes"></td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
+                        <tr><td class="tc-id">TC-005</td><td class="tc-obj" data-i18n="profile.tc.certification"></td><td class="tc-res" data-i18n="profile.tc.certificationRes"></td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
+                        <tr><td class="tc-id">TC-006</td><td class="tc-obj" data-i18n="profile.tc.communication"></td><td class="tc-res" data-i18n="profile.tc.communicationRes"></td><td><span class="tc-pass" data-i18n="profile.tc.pass"></span></td></tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="tc-footer-bar">
-                    <span>6 / 6 passed &nbsp;·&nbsp; Pass rate: 100% &nbsp;·&nbsp; Environment: Production</span>
+                    <span data-i18n="profile.tc.footer"></span>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- Details sidebar -->
-            <div class="issue-details" role="complementary" aria-label="Profile details">
+            <div class="issue-details" role="complementary" data-i18n-attr="aria-label:profile.details.aria">
               <div class="isd-group">
-                <div class="isd-label">Assignee</div>
+                <div class="isd-label" data-i18n="profile.details.assignee"></div>
                 <div class="isd-val isd-with-avatar">
                   <div class="isd-mini-avatar" aria-hidden="true">GK</div>
-                  Georgi Koleshanski
+                  <span data-i18n="common.name"></span>
                 </div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Status</div>
-                <div class="isd-val"><span class="badge-avail">Open to Work</span></div>
+                <div class="isd-label" data-i18n="common.status"></div>
+                <div class="isd-val"><span class="badge-avail" data-i18n="common.openToWork"></span></div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Priority</div>
+                <div class="isd-label" data-i18n="profile.details.priority"></div>
                 <div class="isd-val isd-priority">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-                  High
+                  <span data-i18n="profile.details.high"></span>
                 </div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Location</div>
-                <div class="isd-val">Bulgaria, On-site</div>
+                <div class="isd-label" data-i18n="common.location"></div>
+                <div class="isd-val" data-i18n="common.locationWorkMode"></div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Experience</div>
-                <div class="isd-val">2+ Years</div>
+                <div class="isd-label" data-i18n="profile.details.experience"></div>
+                <div class="isd-val" data-i18n="profile.details.experienceValue"></div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Focus</div>
-                <div class="isd-val">Manual &amp; Automated Testing</div>
+                <div class="isd-label" data-i18n="profile.details.focus"></div>
+                <div class="isd-val" data-i18n="profile.details.focusValue"></div>
               </div>
               <div class="isd-group">
-                <div class="isd-label">Collaboration</div>
-                <div class="isd-val">Cross-functional Teams</div>
+                <div class="isd-label" data-i18n="profile.details.collaboration"></div>
+                <div class="isd-val" data-i18n="profile.details.collaborationValue"></div>
               </div>
 
               <div class="isd-divider"></div>
 
-              <div class="isd-section-label">Languages</div>
+              <div class="isd-section-label" data-i18n="profile.details.languages"></div>
               <div class="isd-lang-list">
                 <div class="isd-lang">
-                  <span class="isd-lang-name">Bulgarian</span>
-                  <span class="isd-lang-level">Native</span>
+                  <span class="isd-lang-name" data-i18n="profile.details.bulgarian"></span>
+                  <span class="isd-lang-level" data-i18n="profile.details.native"></span>
                   <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="100"></div></div>
                 </div>
                 <div class="isd-lang">
-                  <span class="isd-lang-name">English</span>
-                  <span class="isd-lang-level">Professional</span>
+                  <span class="isd-lang-name" data-i18n="profile.details.english"></span>
+                  <span class="isd-lang-level" data-i18n="profile.details.professional"></span>
                   <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="70"></div></div>
-                </div>
-                <div class="isd-lang">
-                  <span class="isd-lang-name">Russian</span>
-                  <span class="isd-lang-level">Elementary</span>
-                  <div class="isd-lang-bar"><div class="isd-lang-fill" data-w="25"></div></div>
                 </div>
               </div>
 
@@ -444,7 +445,7 @@
               <div class="isd-group">
                 <div class="isd-label">LinkedIn</div>
                 <div class="isd-val">
-                  <a href="https://www.linkedin.com/in/georgi-koleshanski-002791312/" target="_blank" rel="noopener noreferrer" class="isd-link">View Profile</a>
+                  <a href="https://www.linkedin.com/in/georgi-koleshanski-002791312/" target="_blank" rel="noopener noreferrer" class="isd-link" data-i18n="profile.details.viewProfile"></a>
                 </div>
               </div>
             </div>
@@ -455,32 +456,32 @@
       <!-- ─── WORK BOARD ─── -->
       <div class="view" id="view-board">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Work Board</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.board"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Work Board</h1>
+              <h1 class="page-title" data-i18n="nav.board"></h1>
               <span class="board-type-tag">Kanban</span>
             </div>
           </div>
 
           <div class="board-toolbar">
-            <div class="bt-filters" role="group" aria-label="Filter issues">
-              <button class="btf-btn btf-active" data-filter="all">All</button>
-              <button class="btf-btn" data-filter="active">Active</button>
-              <button class="btf-btn" data-filter="closed">Closed</button>
+            <div class="bt-filters" role="group" data-i18n-attr="aria-label:board.filterAria">
+              <button class="btf-btn btf-active" data-filter="all" data-i18n="board.all"></button>
+              <button class="btf-btn" data-filter="active" data-i18n="board.active"></button>
+              <button class="btf-btn" data-filter="closed" data-i18n="board.closed"></button>
             </div>
-            <div class="bt-info">3 issues &nbsp;·&nbsp; 0 active &nbsp;·&nbsp; 3 closed</div>
+            <div class="bt-info" data-i18n="board.summary"></div>
           </div>
 
-          <div class="kanban" role="list" aria-label="Work board columns">
+          <div class="kanban" role="list" data-i18n-attr="aria-label:board.columnsAria">
 
             <!-- IN PROGRESS column -->
             <div class="kanban-col" role="listitem" id="col-active">
               <div class="kc-header">
                 <span class="kc-dot kc-dot-blue" aria-hidden="true"></span>
-                <span class="kc-name">In Progress</span>
-                <span class="kc-count" aria-label="0 issues">0</span>
+                <span class="kc-name" data-i18n="board.inProgress"></span>
+                <span class="kc-count">0</span>
               </div>
               <div class="kc-cards">
 
@@ -491,8 +492,8 @@
             <div class="kanban-col" role="listitem" id="col-done">
               <div class="kc-header">
                 <span class="kc-dot kc-dot-green" aria-hidden="true"></span>
-                <span class="kc-name">Done</span>
-                <span class="kc-count" aria-label="3 issues">3</span>
+                <span class="kc-name" data-i18n="board.done"></span>
+                <span class="kc-count">3</span>
               </div>
               <div class="kc-cards">
 
@@ -500,24 +501,24 @@
                 <article class="issue-card" data-status="closed">
                   <div class="ic-top-row">
                     <div class="ic-meta">
-                      <span class="ic-type-story" aria-label="Story type" title="Story"></span>
+                      <span class="ic-type-story" data-i18n-attr="aria-label:board.storyType; title:board.story"></span>
                       <span class="ic-key">GK-001</span>
                     </div>
-                    <span class="ic-priority-high" aria-label="High priority" title="High priority"></span>
+                    <span class="ic-priority-high" data-i18n-attr="aria-label:board.highPriority; title:board.highPriority"></span>
                   </div>
-                  <h3 class="ic-title">Quality Assurance Specialist</h3>
+                  <h3 class="ic-title" data-i18n="common.qaSpecialist"></h3>
                   <div class="ic-epic">
                     <span class="epic-dot" style="--epic-c:#5243aa" aria-hidden="true"></span>
                     <span class="epic-name">Inverso.bg</span>
                   </div>
-                  <div class="ic-dates">Jul 2024 - Sep 2026 &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
-                  <p class="ic-desc">First invoicing platform with integrated AI in Bulgaria. Functional, performance, and security testing.</p>
-                  <div class="ic-tags" aria-label="Skills">
-                    <span>Playwright</span><span>JavaScript</span><span>API Testing</span><span>C# / .NET</span><span>Allure</span>
+                  <div class="ic-dates"><span data-i18n-date="2024-07/2026-09"></span> &nbsp;·&nbsp; <span data-i18n="board.years2"></span> &nbsp;·&nbsp; <span data-i18n="common.bulgaria"></span></div>
+                  <p class="ic-desc" data-i18n="board.inversoDesc"></p>
+                  <div class="ic-tags" data-i18n-attr="aria-label:common.skills">
+                    <span>Playwright</span><span>JavaScript</span><span data-i18n="board.tags.apiTesting"></span><span>C# / .NET</span><span>Allure</span>
                   </div>
                   <div class="ic-footer">
-                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
-                    <span class="ic-status-badge ic-badge-done">Closed</span>
+                    <div class="ic-assignee" data-i18n-attr="aria-label:board.assignedTo">GK</div>
+                    <span class="ic-status-badge ic-badge-done" data-i18n="board.closedBadge"></span>
                   </div>
                 </article>
 
@@ -525,24 +526,24 @@
                 <article class="issue-card" data-status="closed">
                   <div class="ic-top-row">
                     <div class="ic-meta">
-                      <span class="ic-type-story" aria-label="Story type" title="Story"></span>
+                      <span class="ic-type-story" data-i18n-attr="aria-label:board.storyType; title:board.story"></span>
                       <span class="ic-key">GK-002</span>
                     </div>
-                    <span class="ic-priority-high" aria-label="High priority" title="High priority"></span>
+                    <span class="ic-priority-high" data-i18n-attr="aria-label:board.highPriority; title:board.highPriority"></span>
                   </div>
-                  <h3 class="ic-title">Quality Assurance Specialist</h3>
+                  <h3 class="ic-title" data-i18n="common.qaSpecialist"></h3>
                   <div class="ic-epic">
                     <span class="epic-dot" style="--epic-c:#0065ff" aria-hidden="true"></span>
                     <span class="epic-name">Voidweb</span>
                   </div>
-                  <div class="ic-dates">Jul 2024 - Sep 2026 &nbsp;·&nbsp; 2 yrs &nbsp;·&nbsp; Bulgaria</div>
-                  <p class="ic-desc">Comprehensive testing methodologies across multiple projects and testing domains.</p>
-                  <div class="ic-tags" aria-label="Skills">
-                    <span>GitHub</span><span>Cross-browser</span><span>Test Planning</span><span>Mobile Testing</span>
+                  <div class="ic-dates"><span data-i18n-date="2024-07/2026-09"></span> &nbsp;·&nbsp; <span data-i18n="board.years2"></span> &nbsp;·&nbsp; <span data-i18n="common.bulgaria"></span></div>
+                  <p class="ic-desc" data-i18n="board.voidwebDesc"></p>
+                  <div class="ic-tags" data-i18n-attr="aria-label:common.skills">
+                    <span>GitHub</span><span>Cross-browser</span><span data-i18n="board.tags.testPlanning"></span><span data-i18n="board.tags.mobileTesting"></span>
                   </div>
                   <div class="ic-footer">
-                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
-                    <span class="ic-status-badge ic-badge-done">Closed</span>
+                    <div class="ic-assignee" data-i18n-attr="aria-label:board.assignedTo">GK</div>
+                    <span class="ic-status-badge ic-badge-done" data-i18n="board.closedBadge"></span>
                   </div>
                 </article>
 
@@ -550,24 +551,24 @@
                 <article class="issue-card" data-status="closed">
                   <div class="ic-top-row">
                     <div class="ic-meta">
-                      <span class="ic-type-task" aria-label="Task type" title="Task"></span>
+                      <span class="ic-type-task" data-i18n-attr="aria-label:board.taskType; title:board.task"></span>
                       <span class="ic-key">GK-003</span>
                     </div>
-                    <span class="ic-priority-med" aria-label="Medium priority" title="Medium priority"></span>
+                    <span class="ic-priority-med" data-i18n-attr="aria-label:board.mediumPriority; title:board.mediumPriority"></span>
                   </div>
-                  <h3 class="ic-title">CCTV Camera Installer</h3>
+                  <h3 class="ic-title" data-i18n="common.cctvInstaller"></h3>
                   <div class="ic-epic">
                     <span class="epic-dot" style="--epic-c:#6b778c" aria-hidden="true"></span>
                     <span class="epic-name">Systera Technology Ltd</span>
                   </div>
-                  <div class="ic-dates">Jul - Aug 2022 &nbsp;·&nbsp; 2 mos &nbsp;·&nbsp; Panagyurishte</div>
-                  <p class="ic-desc">Implementation and maintenance of electronic surveillance systems.</p>
-                  <div class="ic-tags ic-tags-muted" aria-label="Skills">
-                    <span>CCTV Install</span><span>Security Systems</span><span>Troubleshooting</span>
+                  <div class="ic-dates"><span data-i18n-date="2022-07/2022-08"></span> &nbsp;·&nbsp; <span data-i18n="board.months2"></span> &nbsp;·&nbsp; <span data-i18n="common.panagyurishte"></span></div>
+                  <p class="ic-desc" data-i18n="board.systeraDesc"></p>
+                  <div class="ic-tags ic-tags-muted" data-i18n-attr="aria-label:common.skills">
+                    <span data-i18n="board.tags.cctvInstall"></span><span data-i18n="board.tags.securitySystems"></span><span data-i18n="board.tags.troubleshooting"></span>
                   </div>
                   <div class="ic-footer">
-                    <div class="ic-assignee" aria-label="Assigned to Georgi Koleshanski">GK</div>
-                    <span class="ic-status-badge ic-badge-done">Closed</span>
+                    <div class="ic-assignee" data-i18n-attr="aria-label:board.assignedTo">GK</div>
+                    <span class="ic-status-badge ic-badge-done" data-i18n="board.closedBadge"></span>
                   </div>
                 </article>
 
@@ -581,37 +582,37 @@
       <!-- ─── SKILLS & TOOLS ─── -->
       <div class="view" id="view-skills">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Skills &amp; Tools</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.skills"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Skills &amp; Tools</h1>
-              <p class="page-sub">Test Coverage Report - 22 skills across 6 domains</p>
+              <h1 class="page-title" data-i18n="nav.skills"></h1>
+              <p class="page-sub" data-i18n="skills.subtitle"></p>
             </div>
             <div class="ph-right">
-              <span class="coverage-badge">97% Coverage</span>
+              <span class="coverage-badge" data-i18n="skills.coverageBadge"></span>
             </div>
           </div>
 
           <div class="panel skills-panel">
             <div class="panel-head">
-              <span class="panel-title">Coverage Summary</span>
+              <span class="panel-title" data-i18n="skills.summaryTitle"></span>
             </div>
             <div class="skills-table-wrap">
-              <table class="skills-table" aria-label="Skill coverage by domain">
+              <table class="skills-table" data-i18n-attr="aria-label:skills.tableAria">
                 <thead>
                   <tr>
-                    <th scope="col">Domain</th>
-                    <th scope="col">Skills</th>
-                    <th scope="col" class="align-right">Coverage</th>
-                    <th scope="col" class="col-bar">Progress</th>
+                    <th scope="col" data-i18n="skills.colDomain"></th>
+                    <th scope="col" data-i18n="common.skills"></th>
+                    <th scope="col" class="align-right" data-i18n="skills.colCoverage"></th>
+                    <th scope="col" class="col-bar" data-i18n="skills.colProgress"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                      Automation Tools
+                      <span data-i18n="skills.domains.automation"></span>
                     </td>
                     <td class="st-skills">Playwright, Selenium, Appium, Mocha, Chai</td>
                     <td class="st-pct">95%</td>
@@ -620,7 +621,7 @@
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                      Languages
+                      <span data-i18n="skills.domains.languages"></span>
                     </td>
                     <td class="st-skills">JavaScript, C# / .NET</td>
                     <td class="st-pct">85%</td>
@@ -629,7 +630,7 @@
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                      API &amp; Performance
+                      <span data-i18n="skills.domains.api"></span>
                     </td>
                     <td class="st-skills">Postman, Swagger, JMeter, K6, RestSharp, NUnit</td>
                     <td class="st-pct">98%</td>
@@ -638,35 +639,35 @@
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-                      Testing Types
+                      <span data-i18n="skills.domains.types"></span>
                     </td>
-                    <td class="st-skills">Manual, API, Performance, Mobile, Cross-browser, Unit</td>
+                    <td class="st-skills" data-i18n="skills.lists.types"></td>
                     <td class="st-pct">100%</td>
                     <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="100"></div></div></td>
                   </tr>
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
-                      Reporting &amp; Collab
+                      <span data-i18n="skills.domains.reporting"></span>
                     </td>
-                    <td class="st-skills">Allure Reports, GitHub, Defect Tracking</td>
+                    <td class="st-skills" data-i18n="skills.lists.reporting"></td>
                     <td class="st-pct">95%</td>
                     <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="95"></div></div></td>
                   </tr>
                   <tr>
                     <td class="st-domain">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                      Process &amp; Strategy
+                      <span data-i18n="skills.domains.process"></span>
                     </td>
-                    <td class="st-skills">Test Planning &amp; Strategy, Test Case Design, SDLC Collaboration</td>
+                    <td class="st-skills" data-i18n="skills.lists.process"></td>
                     <td class="st-pct">98%</td>
                     <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill" data-w="98"></div></div></td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr class="st-total-row">
-                    <td class="st-domain"><strong>Overall Coverage</strong></td>
-                    <td class="st-skills st-muted">22 skills across 6 domains</td>
+                    <td class="st-domain"><strong data-i18n="skills.overall"></strong></td>
+                    <td class="st-skills st-muted" data-i18n="skills.overallSub"></td>
                     <td class="st-pct st-total-pct"><strong>97%</strong></td>
                     <td class="st-bar-cell"><div class="st-bar-track"><div class="st-bar-fill st-bar-total" data-w="97"></div></div></td>
                   </tr>
@@ -678,7 +679,7 @@
           <!-- QA Tech Stack - Inverso -->
           <div class="panel tech-stack-panel">
             <div class="panel-head">
-              <span class="panel-title">QA Tech Stack</span>
+              <span class="panel-title" data-i18n="skills.stack.title"></span>
               <span class="ts-project-badge">inverso.bg</span>
             </div>
             <div class="tech-stack-grid">
@@ -687,15 +688,15 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                  Languages
+                  <span data-i18n="skills.stack.languages.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>JavaScript (Node.js)</strong><span class="ts-desc">- main language for the E2E test suite</span></li>
-                  <li><strong>C#</strong><span class="ts-desc">- backend/API test automation (.NET)</span></li>
-                  <li><strong>Python</strong><span class="ts-desc">- AI test-generation tooling (Jira → Claude → Google Sheets pipeline)</span></li>
-                  <li><strong>YAML</strong><span class="ts-desc">- feature manifest for coverage tracking and GitHub Actions workflows</span></li>
-                  <li><strong>Bash</strong><span class="ts-desc">- CI scripts and local automation entry points (generate.sh)</span></li>
-                  <li><strong>HTML / CSS / vanilla JS</strong><span class="ts-desc">- custom QA dashboard</span></li>
+                  <li><strong>JavaScript (Node.js)</strong><span class="ts-desc" data-i18n="skills.stack.languages.js"></span></li>
+                  <li><strong>C#</strong><span class="ts-desc" data-i18n="skills.stack.languages.csharp"></span></li>
+                  <li><strong>Python</strong><span class="ts-desc" data-i18n="skills.stack.languages.python"></span></li>
+                  <li><strong>YAML</strong><span class="ts-desc" data-i18n="skills.stack.languages.yaml"></span></li>
+                  <li><strong>Bash</strong><span class="ts-desc" data-i18n="skills.stack.languages.bash"></span></li>
+                  <li><strong>HTML / CSS / vanilla JS</strong><span class="ts-desc" data-i18n="skills.stack.languages.web"></span></li>
                 </ul>
               </div>
 
@@ -703,12 +704,12 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  E2E / UI Testing
+                  <span data-i18n="skills.stack.e2e.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>Playwright</strong><span class="ts-desc">- core E2E framework; covers auth, onboarding, invoices, offers, clients, reports across Chromium / Firefox / WebKit</span></li>
-                  <li><strong>Playwright storageState</strong><span class="ts-desc">- reuses authenticated sessions across tests instead of logging in every time</span></li>
-                  <li><strong>Playwright fixtures</strong><span class="ts-desc">- per-worker authenticated browser contexts for safe parallel runs</span></li>
+                  <li><strong>Playwright</strong><span class="ts-desc" data-i18n="skills.stack.e2e.playwright"></span></li>
+                  <li><strong>Playwright storageState</strong><span class="ts-desc" data-i18n="skills.stack.e2e.storageState"></span></li>
+                  <li><strong>Playwright fixtures</strong><span class="ts-desc" data-i18n="skills.stack.e2e.fixtures"></span></li>
                 </ul>
               </div>
 
@@ -716,13 +717,13 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                  API / Backend Testing
+                  <span data-i18n="skills.stack.api.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>NUnit</strong><span class="ts-desc">- test framework for the .NET backend suite</span></li>
-                  <li><strong>RestSharp</strong><span class="ts-desc">- HTTP client for hitting API endpoints in tests</span></li>
-                  <li><strong>FluentAssertions</strong><span class="ts-desc">- readable assertion syntax for API responses</span></li>
-                  <li><strong>Bogus</strong><span class="ts-desc">- generates realistic fake test data</span></li>
+                  <li><strong>NUnit</strong><span class="ts-desc" data-i18n="skills.stack.api.nunit"></span></li>
+                  <li><strong>RestSharp</strong><span class="ts-desc" data-i18n="skills.stack.api.restsharp"></span></li>
+                  <li><strong>FluentAssertions</strong><span class="ts-desc" data-i18n="skills.stack.api.fluent"></span></li>
+                  <li><strong>Bogus</strong><span class="ts-desc" data-i18n="skills.stack.api.bogus"></span></li>
                 </ul>
               </div>
 
@@ -733,7 +734,7 @@
                   CI / CD
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>GitHub Actions</strong><span class="ts-desc">- runs tests on macOS, Windows, and Linux; nightly regression run; manual suite-selection triggers; merges multi-platform reports</span></li>
+                  <li><strong>GitHub Actions</strong><span class="ts-desc" data-i18n="skills.stack.cicd.actions"></span></li>
                 </ul>
               </div>
 
@@ -741,13 +742,13 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
-                  Reporting &amp; Observability
+                  <span data-i18n="skills.stack.reporting.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>Allure Report</strong><span class="ts-desc">- rich test reporting with history/trends and custom failure categorization</span></li>
-                  <li><strong>Chart.js</strong><span class="ts-desc">- powers the visual metrics on the custom QA dashboard</span></li>
-                  <li><strong>Netlify CLI</strong><span class="ts-desc">- auto-deploys the QA dashboard to a live public URL after each CI run</span></li>
-                  <li><strong>Custom Node.js scripts</strong><span class="ts-desc">- merge .NET (TRX) and Playwright (JSON) results into one unified coverage report, tracked against a feature manifest</span></li>
+                  <li><strong>Allure Report</strong><span class="ts-desc" data-i18n="skills.stack.reporting.allure"></span></li>
+                  <li><strong>Chart.js</strong><span class="ts-desc" data-i18n="skills.stack.reporting.chartjs"></span></li>
+                  <li><strong>Netlify CLI</strong><span class="ts-desc" data-i18n="skills.stack.reporting.netlify"></span></li>
+                  <li><strong data-i18n="skills.stack.reporting.scriptsName"></strong><span class="ts-desc" data-i18n="skills.stack.reporting.scripts"></span></li>
                 </ul>
               </div>
 
@@ -755,10 +756,10 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  Email Testing
+                  <span data-i18n="skills.stack.email.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>Mailosaur</strong><span class="ts-desc">- verifies real emails sent by the app (invoices, invites, password reset) using disposable test inboxes</span></li>
+                  <li><strong>Mailosaur</strong><span class="ts-desc" data-i18n="skills.stack.email.mailosaur"></span></li>
                 </ul>
               </div>
 
@@ -766,13 +767,13 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/></svg>
-                  AI-Assisted QA Tooling
+                  <span data-i18n="skills.stack.ai.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>Claude Code (CLI)</strong><span class="ts-desc">- orchestrated programmatically to read actual app source and auto-generate test plans/cases from a Jira ticket</span></li>
-                  <li><strong>Jira REST API</strong><span class="ts-desc">- fetches ticket details to feed the AI generation pipeline</span></li>
-                  <li><strong>Google Sheets / Drive API (OAuth2)</strong><span class="ts-desc">- writes the generated test plan into a shared Google Sheet template</span></li>
-                  <li><strong>Flask + Cloudflare Tunnel</strong><span class="ts-desc">- webhook server that auto-triggers test generation when a Jira ticket changes</span></li>
+                  <li><strong>Claude Code (CLI)</strong><span class="ts-desc" data-i18n="skills.stack.ai.claude"></span></li>
+                  <li><strong>Jira REST API</strong><span class="ts-desc" data-i18n="skills.stack.ai.jira"></span></li>
+                  <li><strong>Google Sheets / Drive API (OAuth2)</strong><span class="ts-desc" data-i18n="skills.stack.ai.sheets"></span></li>
+                  <li><strong>Flask + Cloudflare Tunnel</strong><span class="ts-desc" data-i18n="skills.stack.ai.flask"></span></li>
                 </ul>
               </div>
 
@@ -780,12 +781,12 @@
               <div class="ts-category">
                 <h3 class="ts-cat-title">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                  Tooling
+                  <span data-i18n="skills.stack.tooling.title"></span>
                 </h3>
                 <ul class="ts-list">
-                  <li><strong>Git / GitHub</strong><span class="ts-desc">- version control and PR workflow</span></li>
-                  <li><strong>VSCode</strong><span class="ts-desc">- primary IDE, with project-specific run/debug configs</span></li>
-                  <li><strong>dotenv</strong><span class="ts-desc">- manages environment-based config/secrets locally and in CI</span></li>
+                  <li><strong>Git / GitHub</strong><span class="ts-desc" data-i18n="skills.stack.tooling.git"></span></li>
+                  <li><strong>VSCode</strong><span class="ts-desc" data-i18n="skills.stack.tooling.vscode"></span></li>
+                  <li><strong>dotenv</strong><span class="ts-desc" data-i18n="skills.stack.tooling.dotenv"></span></li>
                 </ul>
               </div>
 
@@ -798,15 +799,15 @@
       <!-- ─── PROJECTS ─── -->
       <div class="view" id="view-projects">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Projects</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.projects"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Projects</h1>
-              <p class="page-sub">Internal tools built to improve the QA process</p>
+              <h1 class="page-title" data-i18n="nav.projects"></h1>
+              <p class="page-sub" data-i18n="projects.subtitle"></p>
             </div>
             <div class="ph-right">
-              <span class="coverage-badge">3 Projects</span>
+              <span class="coverage-badge" data-i18n="projects.count"></span>
             </div>
           </div>
 
@@ -820,7 +821,7 @@
                 </div>
                 <div class="pc-title-wrap">
                   <h2 class="pc-title">QA Dashboard</h2>
-                  <p class="pc-subtitle">Unified test coverage visualization across the entire project</p>
+                  <p class="pc-subtitle" data-i18n="projects.dashboard.subtitle"></p>
                 </div>
                 <div class="pc-toggle">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -828,17 +829,17 @@
               </div>
               <div class="pc-body">
                 <div class="pc-section">
-                  <h3>Why I built it</h3>
-                  <p>Test results were scattered across different places - Playwright reports, .NET .trx files, separate CI runs - with no single view of how much of the actual product was covered by tests and where the gaps were.</p>
+                  <h3 data-i18n="projects.why"></h3>
+                  <p data-i18n="projects.dashboard.why"></p>
                 </div>
                 <div class="pc-section">
-                  <h3>What problem it solves</h3>
+                  <h3 data-i18n="projects.problem"></h3>
                   <ul>
-                    <li>Merges results from two different test stacks (Playwright/JS frontend + NUnit/.NET backend) into one unified dashboard.</li>
-                    <li>Shows not just "how many tests pass," but which critical product features actually have coverage - via a risk-weighted score (critical modules count more than low-risk ones).</li>
-                    <li>Surfaces coverage "blind spots" - modules with zero passing tests.</li>
-                    <li>Tracks trends over time (coverage history across runs), instead of each CI run being an isolated snapshot.</li>
-                    <li>Auto-generates and publishes to a live URL after every CI run, so the whole team (QA, devs, PM) can see the current state without going into GitHub Actions.</li>
+                    <li data-i18n="projects.dashboard.problem.0"></li>
+                    <li data-i18n="projects.dashboard.problem.1"></li>
+                    <li data-i18n="projects.dashboard.problem.2"></li>
+                    <li data-i18n="projects.dashboard.problem.3"></li>
+                    <li data-i18n="projects.dashboard.problem.4"></li>
                   </ul>
                 </div>
                 <div class="pc-tags">
@@ -855,7 +856,7 @@
                 </div>
                 <div class="pc-title-wrap">
                   <h2 class="pc-title">AI Test Generator</h2>
-                  <p class="pc-subtitle">Auto-generates QA test plans and test cases from Jira tickets</p>
+                  <p class="pc-subtitle" data-i18n="projects.generator.subtitle"></p>
                 </div>
                 <div class="pc-toggle">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -863,29 +864,29 @@
               </div>
               <div class="pc-body">
                 <div class="pc-section">
-                  <h3>Why I built it</h3>
-                  <p>Writing detailed test plans (functional, negative, edge case, regression) for every new feature manually is slow and repetitive, and it's easy to miss cases when working straight from a ticket description instead of the actual implementation.</p>
+                  <h3 data-i18n="projects.why"></h3>
+                  <p data-i18n="projects.generator.why"></p>
                 </div>
                 <div class="pc-section">
-                  <h3>What problem it solves</h3>
+                  <h3 data-i18n="projects.problem"></h3>
                   <ul>
-                    <li>Takes a Jira ticket ID and automatically produces a complete test plan + test cases, instead of a QA writing them by hand from scratch.</li>
-                    <li>Bases the generated tests on the actual code (both backend and frontend repos), not just the ticket text - so it catches edge cases, validations, and error handling that aren't mentioned in the ticket description.</li>
-                    <li>Delivers the result directly into a shared Google Sheet (from a template), ready for the QA to review and execute - no manual formatting or copy-pasting.</li>
-                    <li>Notifies by email when generation is done, so there's no need to babysit the process (which takes a few minutes per ticket).</li>
-                    <li>Can be triggered automatically via a Jira webhook when a ticket changes, removing the manual step entirely.</li>
+                    <li data-i18n="projects.generator.problem.0"></li>
+                    <li data-i18n="projects.generator.problem.1"></li>
+                    <li data-i18n="projects.generator.problem.2"></li>
+                    <li data-i18n="projects.generator.problem.3"></li>
+                    <li data-i18n="projects.generator.problem.4"></li>
                   </ul>
                 </div>
                 <div class="pc-section">
-                  <h3>How it works</h3>
+                  <h3 data-i18n="projects.how"></h3>
                   <ol>
-                    <li>You run <code>./generate.sh IN-184</code> (or it triggers automatically via a Jira webhook when the ticket changes).</li>
-                    <li>A Python script fetches the ticket (summary, description, acceptance criteria) from Jira through the Jira REST API.</li>
-                    <li>It builds a detailed QA prompt and feeds it to the Claude Code CLI, pointing it directly at the real backend (Laravel) and frontend (Vue.js) repos so it analyzes the actual implementation, not just the ticket text.</li>
-                    <li>Claude returns structured test cases (functional, negative, edge case, regression), which the script parses into JSON.</li>
-                    <li>The parsed result is written into a new Google Sheet, copied from a shared template, via the Google Sheets/Drive API.</li>
-                    <li>An email notification is sent once the sheet is ready, with a link to it.</li>
-                    <li>Optionally, a small Flask webhook server (exposed via Cloudflare Tunnel) listens for Jira ticket updates and re-triggers the whole flow automatically, ignoring irrelevant changes like status or assignee updates.</li>
+                    <li data-i18n-html="projects.generator.how.0"></li>
+                    <li data-i18n="projects.generator.how.1"></li>
+                    <li data-i18n="projects.generator.how.2"></li>
+                    <li data-i18n="projects.generator.how.3"></li>
+                    <li data-i18n="projects.generator.how.4"></li>
+                    <li data-i18n="projects.generator.how.5"></li>
+                    <li data-i18n="projects.generator.how.6"></li>
                   </ol>
                 </div>
                 <div class="pc-tags">
@@ -902,7 +903,7 @@
                 </div>
                 <div class="pc-title-wrap">
                   <h2 class="pc-title">QA Test Copilot</h2>
-                  <p class="pc-subtitle">A custom /qa-test Claude Code command that code-reviews, live-tests, and documents a ticket end-to-end</p>
+                  <p class="pc-subtitle" data-i18n="projects.copilot.subtitle"></p>
                 </div>
                 <div class="pc-toggle">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
@@ -910,31 +911,31 @@
               </div>
               <div class="pc-body">
                 <div class="pc-section">
-                  <h3>Why I built it</h3>
-                  <p>Testing a ticket end-to-end always meant repeating the same tedious sequence by hand: reading the code, checking the database, hitting the API, testing the UI, then re-testing on the mobile app - and writing up the findings in a way a developer could actually act on took just as long as the testing itself.</p>
+                  <h3 data-i18n="projects.why"></h3>
+                  <p data-i18n="projects.copilot.why"></p>
                 </div>
                 <div class="pc-section">
-                  <h3>What problem it solves</h3>
+                  <h3 data-i18n="projects.problem"></h3>
                   <ul>
-                    <li>Turns a single command, <code>/qa-test 19</code>, into a full QA pass on a specific ticket: pulls the latest code, looks up the ticket number and its description, and locates exactly where and how it was implemented in the Laravel codebase.</li>
-                    <li>Runs a detailed code review of the change first - including how it touches other modules - to catch logic and integration issues before any test is even executed.</li>
-                    <li>Runs real functional tests two ways on the backend: direct API requests plus Laravel Tinker and database checks, and separately drives the UI live through Playwright MCP.</li>
-                    <li>Extends the same testing pass to the mobile app by launching an Android Studio emulator and running live test flows, taking screenshots along the way to track progress and decide what to check next.</li>
-                    <li>Writes every issue it finds into a developer-ready Markdown report: what's broken, exact steps to reproduce, the actual effect, and why it's happening - everything needed to fix it without back-and-forth.</li>
-                    <li>Persists everything into a session Markdown file, so a QA pass can be resumed exactly where it left off instead of losing context between sessions.</li>
+                    <li data-i18n-html="projects.copilot.problem.0"></li>
+                    <li data-i18n="projects.copilot.problem.1"></li>
+                    <li data-i18n="projects.copilot.problem.2"></li>
+                    <li data-i18n="projects.copilot.problem.3"></li>
+                    <li data-i18n="projects.copilot.problem.4"></li>
+                    <li data-i18n="projects.copilot.problem.5"></li>
                   </ul>
                 </div>
                 <div class="pc-section">
-                  <h3>How it works</h3>
+                  <h3 data-i18n="projects.how"></h3>
                   <ol>
-                    <li>You type <code>/qa-test 19</code> in Claude Code, where 19 is the ticket number.</li>
-                    <li>Claude pulls the latest changes from the repo and looks up ticket #19's description in the tracker.</li>
-                    <li>It searches the PHP/Laravel codebase to find exactly where and how the ticket was implemented.</li>
-                    <li>It code-reviews that implementation, tracing how it interacts with other modules to flag risky or broken integrations before testing starts.</li>
-                    <li>It runs backend tests via direct API calls, Laravel Tinker, and database queries, then runs live UI tests through Playwright MCP.</li>
-                    <li>It launches the mobile app in an Android Studio emulator and runs live test flows, capturing screenshots to track state and guide the next test step.</li>
-                    <li>Every issue found is written into a Markdown report formatted for handoff: the bug, reproduction steps, the effect, and the root cause.</li>
-                    <li>Everything is saved into a session Markdown file, so the QA process for that ticket can be picked up later without losing history.</li>
+                    <li data-i18n-html="projects.copilot.how.0"></li>
+                    <li data-i18n="projects.copilot.how.1"></li>
+                    <li data-i18n="projects.copilot.how.2"></li>
+                    <li data-i18n="projects.copilot.how.3"></li>
+                    <li data-i18n="projects.copilot.how.4"></li>
+                    <li data-i18n="projects.copilot.how.5"></li>
+                    <li data-i18n="projects.copilot.how.6"></li>
+                    <li data-i18n="projects.copilot.how.7"></li>
                   </ol>
                 </div>
                 <div class="pc-tags">
@@ -950,18 +951,18 @@
       <!-- ─── CERTIFICATIONS ─── -->
       <div class="view" id="view-certs">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Certifications</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.certs"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Certifications</h1>
-              <p class="page-sub">12 credentials - Professional development milestones</p>
+              <h1 class="page-title" data-i18n="nav.certs"></h1>
+              <p class="page-sub" data-i18n="certs.subtitle"></p>
             </div>
           </div>
 
           <!-- Filter bar -->
-          <div class="cert-filters" role="group" aria-label="Filter certifications">
-            <button class="cf-btn cf-active" data-cf="all">All (12)</button>
+          <div class="cert-filters" role="group" data-i18n-attr="aria-label:certs.filterAria">
+            <button class="cf-btn cf-active" data-cf="all" data-i18n="certs.all"></button>
             <button class="cf-btn" data-cf="softuni">SoftUni (11)</button>
             <button class="cf-btn" data-cf="w3schools">W3Schools (1)</button>
           </div>
@@ -970,28 +971,28 @@
           <div class="cert-featured panel">
             <div class="cert-featured-body">
               <div class="cfb-left">
-                <span class="cert-milestone-tag">Flagship Credential</span>
+                <span class="cert-milestone-tag" data-i18n="certs.flagship"></span>
                 <svg class="cfb-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
-                <h2><a href="https://softuni.bg/Certificates/Details/251223/1ae02851" target="_blank" rel="noopener noreferrer" class="cfb-cert-link">QA Automation Engineer Diploma</a></h2>
-                <p class="cfb-issuer">Software University (SoftUni)</p>
-                <p class="cfb-date">Issued: October 2025</p>
+                <h2><a href="https://softuni.bg/Certificates/Details/251223/1ae02851" target="_blank" rel="noopener noreferrer" class="cfb-cert-link" data-i18n="common.qaDiploma"></a></h2>
+                <p class="cfb-issuer" data-i18n="common.softuni"></p>
+                <p class="cfb-date" data-i18n="certs.issued"></p>
                 <div class="cfb-tags">
-                  <span>Back-End Test Automation</span>
-                  <span>Front-End Test Automation</span>
-                  <span>Performance Testing</span>
-                  <span>Automation Engineering</span>
+                  <span data-i18n="certs.tags.backendAutomation"></span>
+                  <span data-i18n="certs.tags.frontendAutomation"></span>
+                  <span data-i18n="certs.tags.performance"></span>
+                  <span data-i18n="certs.tags.automationEngineering"></span>
                 </div>
               </div>
               <div class="cfb-right">
                 <div class="cfb-stat-block">
                   <div class="cfb-stat-num">17</div>
-                  <div class="cfb-stat-lbl">Month program</div>
+                  <div class="cfb-stat-lbl" data-i18n="certs.monthProgram"></div>
                 </div>
                 <div class="cfb-stat-block">
                   <div class="cfb-stat-num">12</div>
-                  <div class="cfb-stat-lbl">Total credentials</div>
+                  <div class="cfb-stat-lbl" data-i18n="certs.totalCredentials"></div>
                 </div>
-                <span class="badge-cert-lg">Certified</span>
+                <span class="badge-cert-lg" data-i18n="certs.certified"></span>
               </div>
             </div>
           </div>
@@ -999,10 +1000,10 @@
           <!-- Cert list -->
           <div class="panel">
             <div class="cert-list-header" aria-hidden="true">
-              <span class="clh-name">Certification</span>
-              <span class="clh-issuer">Issuer</span>
-              <span class="clh-date">Issued</span>
-              <span class="clh-status">Status</span>
+              <span class="clh-name" data-i18n="certs.colCert"></span>
+              <span class="clh-issuer" data-i18n="certs.colIssuer"></span>
+              <span class="clh-date" data-i18n="certs.colIssued"></span>
+              <span class="clh-status" data-i18n="common.status"></span>
             </div>
             <div class="cert-list" id="certList">
 
@@ -1010,22 +1011,22 @@
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>Vibe Coding Basics</span>
-                  <div class="cr-tags"><span>AI Coding</span><span>Vibe Coding</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.aiCoding"></span><span>Vibe Coding</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Sep 2025</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2025-09"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/249321/28b9b244" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>Back-End Test Automation</span>
-                  <div class="cr-tags"><span>Performance Testing</span><span>JMeter</span><span>K6</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.performance"></span><span>JMeter</span><span>K6</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Jul 2025</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2025-07"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/246680/840e87be" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
@@ -1035,8 +1036,8 @@
                   <div class="cr-tags"><span>C#</span><span>.NET</span><span>SQL</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">May 2025</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2025-05"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/243048/36bb556e" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
@@ -1046,8 +1047,8 @@
                   <div class="cr-tags"><span>Selenium</span><span>Appium</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Feb 2025</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2025-02"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/238104/9d4e7859" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
@@ -1057,30 +1058,30 @@
                   <div class="cr-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Jan 2025</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2025-01"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/224049/905ea852" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>Programming Advanced for QA</span>
-                  <div class="cr-tags"><span>Data Structures</span><span>Regex</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.dataStructures"></span><span>Regex</span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Jul 2024</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2024-07"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/219826/43133c43" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>Programming Fundamentals &amp; Unit Testing</span>
-                  <div class="cr-tags"><span>Unit Testing</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.unitTesting"></span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">May 2024</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2024-05"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://verify.w3schools.com/1OFDGVKTZB" target="_blank" rel="noopener noreferrer" data-issuer="w3schools">
@@ -1090,41 +1091,41 @@
                   <div class="cr-tags"><span>C#</span></div>
                 </div>
                 <span class="cr-issuer">W3Schools</span>
-                <span class="cr-date">Jan 2024</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2024-01"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/200599/473deabf" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>QA Fundamentals &amp; Manual Testing</span>
-                  <div class="cr-tags"><span>Manual Testing</span><span>Defect Tracking</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.manualTesting"></span><span data-i18n="certs.tags.defectTracking"></span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Oct 2023</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2023-10"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/191576/cd358dc0" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>Software Technologies</span>
-                  <div class="cr-tags"><span>Hardware &amp; Software</span><span>OS Fundamentals</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.hardwareSoftware"></span><span data-i18n="certs.tags.osFundamentals"></span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Sep 2023</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2023-09"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
               <a class="cert-row" href="https://softuni.bg/Certificates/Details/178671/d8f3c714" target="_blank" rel="noopener noreferrer" data-issuer="softuni">
                 <div class="cr-name">
                   <svg class="cr-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                   <span>QA Basics</span>
-                  <div class="cr-tags"><span>QA Fundamentals</span><span>Testing Types</span></div>
+                  <div class="cr-tags"><span data-i18n="certs.tags.qaFundamentals"></span><span data-i18n="certs.tags.testingTypes"></span></div>
                 </div>
                 <span class="cr-issuer">SoftUni</span>
-                <span class="cr-date">Jul 2023</span>
-                <span><span class="badge-cert">Certified</span></span>
+                <span class="cr-date" data-i18n-date="2023-07"></span>
+                <span><span class="badge-cert" data-i18n="certs.rowStatus"></span></span>
               </a>
 
             </div>
@@ -1135,12 +1136,12 @@
       <!-- ─── EDUCATION ─── -->
       <div class="view" id="view-education">
         <div class="view-inner">
-          <nav class="breadcrumb" aria-label="Breadcrumb"><span>QA Workspace</span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current">Education</span></nav>
+          <nav class="breadcrumb" data-i18n-attr="aria-label:a11y.breadcrumb"><span data-i18n="common.brand"></span><span class="bc-sep" aria-hidden="true">/</span><span class="bc-current" data-i18n="nav.education"></span></nav>
 
           <div class="page-header">
             <div class="ph-left">
-              <h1 class="page-title">Education</h1>
-              <p class="page-sub">Academic background and training programs</p>
+              <h1 class="page-title" data-i18n="nav.education"></h1>
+              <p class="page-sub" data-i18n="education.subtitle"></p>
             </div>
           </div>
 
@@ -1153,16 +1154,16 @@
               </div>
               <div class="panel edu-panel">
                 <div class="ep-header">
-                  <span class="ep-status ep-status-done">Completed</span>
-                  <span class="ep-dates">Sep 2022 - Jul 2026</span>
+                  <span class="ep-status ep-status-done" data-i18n="common.completed"></span>
+                  <span class="ep-dates" data-i18n-date="2022-09/2026-07"></span>
                 </div>
-                <h2 class="ep-title">Bachelor's Degree - Software Technologies and Design</h2>
+                <h2 class="ep-title" data-i18n="common.bachelor"></h2>
                 <p class="ep-institution">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                  University of Plovdiv "Paisii Hilendarski" - Faculty of Mathematics and Informatics (FMI)
+                  <span data-i18n="common.puFull"></span>
                 </p>
-                <p class="ep-desc">Developing expertise in software technologies, design principles, and logical thinking. Building a strong foundation in software engineering and quality assurance practices.</p>
-                <span class="ep-grade">Grade: Very good (5.03)</span>
+                <p class="ep-desc" data-i18n="education.bachelorDesc"></p>
+                <span class="ep-grade" data-i18n="education.bachelorGrade"></span>
               </div>
             </article>
 
@@ -1173,17 +1174,17 @@
               </div>
               <div class="panel edu-panel">
                 <div class="ep-header">
-                  <span class="ep-status ep-status-done">Completed</span>
-                  <span class="ep-dates">Jul 2023 - Oct 2025</span>
+                  <span class="ep-status ep-status-done" data-i18n="common.completed"></span>
+                  <span class="ep-dates" data-i18n-date="2023-07/2025-10"></span>
                 </div>
-                <h2 class="ep-title">QA Engineer Program - Computer Programming</h2>
+                <h2 class="ep-title" data-i18n="education.softuniTitle"></h2>
                 <p class="ep-institution">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                  Software University (SoftUni)
+                  <span data-i18n="common.softuni"></span>
                 </p>
-                <p class="ep-desc">Comprehensive 17-month QA Automation Engineer program covering manual and automated testing. Curriculum included QA fundamentals, programming for QA, back-end and front-end test automation, and career development. Hands-on experience with Selenium, Appium, Postman, Swagger, Mocha, Chai, JMeter, K6, NUnit, and RestSharp.</p>
-                <p class="ep-note">Participated in live sessions, collaborative projects, peer reviews, and the IT Career Booster program.</p>
-                <span class="ep-grade">Grade: Excellent (5.98)</span>
+                <p class="ep-desc" data-i18n="education.softuniDesc"></p>
+                <p class="ep-note" data-i18n="education.softuniNote"></p>
+                <span class="ep-grade" data-i18n="education.softuniGrade"></span>
               </div>
             </article>
 
@@ -1194,16 +1195,16 @@
               </div>
               <div class="panel edu-panel">
                 <div class="ep-header">
-                  <span class="ep-status ep-status-done">Completed</span>
-                  <span class="ep-dates">Sep 2010 - May 2022</span>
+                  <span class="ep-status ep-status-done" data-i18n="common.completed"></span>
+                  <span class="ep-dates" data-i18n-date="2010-09/2022-05"></span>
                 </div>
-                <h2 class="ep-title">Secondary School Diploma - Mathematics and Computer Science</h2>
+                <h2 class="ep-title" data-i18n="education.schoolTitle"></h2>
                 <p class="ep-institution">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                  "Nesho Bonchev" Secondary School
+                  <span data-i18n="common.school"></span>
                 </p>
-                <span class="ep-grade">Grade: Excellent (5.94)</span>
-                <p class="ep-desc">Focused on Mathematics and Informatics. Built strong analytical and logical thinking skills that form the foundation of quality-driven software testing.</p>
+                <span class="ep-grade" data-i18n="education.schoolGrade"></span>
+                <p class="ep-desc" data-i18n="education.schoolDesc"></p>
               </div>
             </article>
 
@@ -1218,13 +1219,16 @@
   <div class="loading-screen" id="loadingScreen" aria-hidden="true" role="presentation">
     <div class="ls-content">
       <div class="ls-logo" aria-hidden="true">GK</div>
-      <p class="ls-welcome">Welcome</p>
-      <h1 class="ls-name">Georgi Koleshanski</h1>
-      <p class="ls-role">QA Engineer</p>
+      <p class="ls-welcome" data-i18n="loading.welcome"></p>
+      <h1 class="ls-name" data-i18n="common.name"></h1>
+      <p class="ls-role" data-i18n="common.role"></p>
       <div class="ls-bar" aria-hidden="true"><div class="ls-bar-fill"></div></div>
     </div>
   </div>
 
+  <script src="locales/en.js"></script>
+  <script src="locales/bg.js"></script>
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
