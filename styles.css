@@ -852,6 +852,19 @@ p + p { margin-top: 8px; }
 /* ============================================================
    PROJECTS
    ============================================================ */
+.project-group + .project-group { margin-top: 28px; }
+.pg-title {
+  display: flex; align-items: center; gap: 8px;
+  margin: 0 0 10px; padding: 0 2px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-sub);
+}
+.pg-count {
+  min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px;
+  background: #dfe1e6; color: var(--text-sub);
+  font-size: 11px; font-weight: 700; letter-spacing: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+}
 .project-cards { display: flex; flex-direction: column; gap: 12px; }
 .project-card {
   background: var(--card-bg); border: 1px solid var(--border);
@@ -881,6 +894,8 @@ p + p { margin-top: 8px; }
   font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
   background: var(--purple-50); color: var(--purple);
 }
+.pc-badge-live { background: var(--green-50); color: var(--green-text); }
+a.pc-badge-live:hover { text-decoration: underline; }
 .pc-subtitle { font-size: 12.5px; color: var(--text-sub); margin: 2px 0 0; }
 .pc-toggle {
   width: 28px; height: 28px; flex-shrink: 0;
@@ -903,7 +918,7 @@ p + p { margin-top: 8px; }
 
 .pc-section { margin-bottom: 16px; }
 .pc-section:last-of-type { margin-bottom: 12px; }
-.pc-section h3 {
+.pc-section h4 {
   font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
   color: var(--text-sub); margin: 0 0 8px;
 }

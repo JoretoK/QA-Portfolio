@@ -231,6 +231,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.classList.toggle('pc-open');
   });
   card.addEventListener('keydown', e => {
+    if (e.target !== card) return; // let links inside the card handle their own keys
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       card.classList.toggle('pc-open');

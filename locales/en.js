@@ -264,8 +264,12 @@ window.LOCALES.en = {
   },
 
   projects: {
-    subtitle: 'Tools built to improve the QA process',
-    count: '4 Projects',
+    subtitle: "Products and tools I've built - from QA automation to a live mobile app",
+    count: '5 Projects',
+    groups: {
+      qa: 'QA & Test Automation',
+      other: 'Other Projects'
+    },
     why: 'Why I built it',
     problem: 'What problem it solves',
     how: 'How it works',
@@ -288,6 +292,27 @@ window.LOCALES.en = {
         'The QA engineer reviews and edits the draft, then submits it for review.',
         'A Team Lead approves it, which locks the version, or rejects it with a comment; the author is notified either way.',
         'Role-specific dashboards built with Chart.js show generation activity and test statuses, while Admins manage users and browse the audit logs.'
+      ]
+    },
+    kolario: {
+      badge: 'Live on Google Play',
+      subtitle: 'A digital service book and personal garage for your car - a mobile app live on Google Play',
+      why: "I've always wanted to build something that real people actually use, not just a demo. Kolario is a vibe-coded project: I built it with AI coding tools, while I owned the product decisions, the testing, and the whole release process up to Google Play. Seeing it installed and used by drivers in Bulgaria is exactly what I was after.",
+      problem: [
+        'Replaces the paper service book, scattered invoices, and notebook notes with one organized, always-available history for each car.',
+        'Logs every service visit with date, mileage, parts, labor, and cost, and tracks other car expenses (insurance, tax, vignette, fines) with charts by month and category.',
+        "Tracks what's about to expire - insurance, annual inspection, vignette, tax, warranty - and warns on the dashboard when something is overdue or due soon, with optional push reminders.",
+        'Scans service invoices with the camera and reads the amount, date, and mileage on the device, without uploading anything for analysis.',
+        "Supports several cars per account and exports a car's full history as a PDF - useful proof of maintenance when selling it.",
+        'Free, with no ads and no behavioral tracking; users sign in with email, Google, or as a guest, and can delete their account at any time from the app.'
+      ],
+      how: [
+        'Built with Flutter and Dart, using Riverpod for state management and go_router for navigation, in a layered structure (core / domain / data / presentation).',
+        'Supabase is the backend: Postgres with Row Level Security so every user only sees their own data, authentication (email, Google, Apple, guest), file storage, and Edge Functions for account deletion.',
+        'The invoice scanner uses Google ML Kit on-device text recognition, and reminders are scheduled as local notifications.',
+        'Quality is covered by 350+ automated unit, widget, and integration tests, plus live tests against the real backend and Android emulator smoke tests.',
+        'GitHub Actions runs static analysis, the test suite, and a coverage gate on every push; Codemagic builds the iOS version.',
+        'Every release goes through Google Play closed testing and review before it reaches production.'
       ]
     },
     dashboard: {
