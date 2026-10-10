@@ -264,11 +264,32 @@ window.LOCALES.en = {
   },
 
   projects: {
-    subtitle: 'Internal tools built to improve the QA process',
-    count: '3 Projects',
+    subtitle: 'Tools built to improve the QA process',
+    count: '4 Projects',
     why: 'Why I built it',
     problem: 'What problem it solves',
     how: 'How it works',
+    testforge: {
+      badge: "Bachelor's Thesis",
+      subtitle: 'An AI-powered web platform that turns user stories, HTML, and UI screenshots into reviewed, versioned Playwright tests',
+      why: "Writing Playwright tests by hand from requirements is slow, and AI-generated test code can't go straight into a suite - someone still has to check it. For my bachelor's thesis I wanted to build a platform where AI writes the first draft, while the team keeps a real QA process around it: review and approval, version history, roles, and a full audit trail.",
+      problem: [
+        'Generates a complete Playwright test from three kinds of input: a user story, the raw HTML of a component, or a screenshot of the UI (analyzed with an OpenAI vision model).',
+        'Returns more than just test code - every generation also includes edge cases, negative scenarios, and a short explanation of what the test covers.',
+        'Puts every generated test through a review workflow (Draft → Ready for Review → Approved / Rejected), with Team Lead comments and in-app notifications at each step.',
+        'Keeps a full version history: each new generation becomes a new version, and approved versions are locked against further edits.',
+        'Role-based access for QA engineers, Team Leads, and Admins, with per-role daily generation limits and usage and token logging to keep AI costs under control.',
+        'Exports approved tests as ready-to-run .spec.ts files.'
+      ],
+      how: [
+        'A QA engineer picks a project and submits a user story, an HTML snippet, or a screenshot.',
+        'A dedicated service layer sends it to OpenAI with a QA-focused system prompt that enforces Playwright best practices (web-first assertions, resilient selectors) and a strict JSON response format.',
+        'The response is parsed into test code, edge cases, negative scenarios, and an explanation, then saved as a new test version in SQL Server through Entity Framework Core.',
+        'The QA engineer reviews and edits the draft, then submits it for review.',
+        'A Team Lead approves it, which locks the version, or rejects it with a comment; the author is notified either way.',
+        'Role-specific dashboards built with Chart.js show generation activity and test statuses, while Admins manage users and browse the audit logs.'
+      ]
+    },
     dashboard: {
       subtitle: 'Unified test coverage visualization across the entire project',
       why: 'Test results were scattered across different places - Playwright reports, .NET .trx files, separate CI runs - with no single view of how much of the actual product was covered by tests and where the gaps were.',
@@ -357,6 +378,8 @@ window.LOCALES.en = {
   education: {
     subtitle: 'Academic background and training programs',
     bachelorDesc: 'Developing expertise in software technologies, design principles, and logical thinking. Building a strong foundation in software engineering and quality assurance practices.',
+    thesisLabel: "Bachelor's thesis:",
+    thesisDesc: '- an AI-powered platform for generating and reviewing Playwright tests',
     bachelorGrade: 'Grade: Very good (5.03)',
     softuniTitle: 'QA Engineer Program - Computer Programming',
     softuniDesc: 'Comprehensive 17-month QA Automation Engineer program covering manual and automated testing. Curriculum included QA fundamentals, programming for QA, back-end and front-end test automation, and career development. Hands-on experience with Selenium, Appium, Postman, Swagger, Mocha, Chai, JMeter, K6, NUnit, and RestSharp.',
