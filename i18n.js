@@ -52,13 +52,16 @@ window.i18n = (function () {
     return vars ? value.replace(/\{(\w+)\}/g, (m, name) => (name in vars ? vars[name] : m)) : value;
   }
 
-  // "2024-07" → "Jul 2024"; "2024-07/2026-09" → "Jul 2024 - Sep 2026"; same year → "Jul - Aug 2022"
+  // "2024-07" → "Jul 2024"; "2024-07/2026-09" → "Jul 2024 - Sep 2026"; same year → "Jul - Aug 2022";
+  // "2026-10/present" → "Oct 2026 - Present"
   function formatDate(spec) {
     const months = resolve('dates.monthsShort') || [];
-    const [from, to] = spec.split('/').map(part => {
+    const [fromSpec, toSpec] = spec.split('/');
+    const [from, to] = [fromSpec, toSpec].filter(Boolean).map(part => {
       const [year, month] = part.split('-');
       return { year, month: months[Number(month) - 1] };
     });
+    if (toSpec === 'present') return `${from.month} ${from.year} - ${t('dates.present')}`;
     if (!to) return `${from.month} ${from.year}`;
     if (from.year === to.year) return `${from.month} - ${to.month} ${to.year}`;
     return `${from.month} ${from.year} - ${to.month} ${to.year}`;

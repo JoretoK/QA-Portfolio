@@ -20,11 +20,13 @@ window.LOCALES.en = {
     location: 'Location',
     skills: 'Skills',
     completed: 'Completed',
+    inProgress: 'In Progress',
     bulgaria: 'Bulgaria',
     panagyurishte: 'Panagyurishte',
     locationWorkMode: 'Bulgaria, Remote / Hybrid',
     qaSpecialist: 'Quality Assurance Specialist',
     cctvInstaller: 'CCTV Camera Installer',
+    master: "Master's Degree - Pedagogy of Mathematics Education",
     bachelor: "Bachelor's Degree - Software Technologies and Design",
     qaDiploma: 'QA Automation Engineer Diploma',
     softuni: 'Software University (SoftUni)',
@@ -42,7 +44,8 @@ window.LOCALES.en = {
   },
 
   dates: {
-    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    present: 'Present'
   },
 
   nav: {
@@ -101,7 +104,7 @@ window.LOCALES.en = {
       issues: '3 issues',
       credentials: '12 credentials',
       skills: '22 skills',
-      entries: '3 entries'
+      entries: '4 entries'
     }
   },
 
@@ -402,6 +405,7 @@ window.LOCALES.en = {
 
   education: {
     subtitle: 'Academic background and training programs',
+    masterDesc: "Master's program focused on the methodology and pedagogy of teaching mathematics.",
     bachelorDesc: 'Developing expertise in software technologies, design principles, and logical thinking. Building a strong foundation in software engineering and quality assurance practices.',
     thesisLabel: "Bachelor's thesis:",
     thesisDesc: '- an AI-powered platform for generating and reviewing Playwright tests',
