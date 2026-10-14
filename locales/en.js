@@ -298,9 +298,10 @@ window.LOCALES.en = {
       ]
     },
     kolario: {
-      badge: 'Live on Google Play',
-      subtitle: 'A digital service book and personal garage for your car - a mobile app live on Google Play',
-      why: "I've always wanted to build something that real people actually use, not just a demo. Kolario is a vibe-coded project: I built it with AI coding tools, while I owned the product decisions, the testing, and the whole release process up to Google Play. Seeing it installed and used by drivers in Bulgaria is exactly what I was after.",
+      badge: 'Google Play',
+      badgeIos: 'App Store',
+      subtitle: 'A digital service book and personal garage for your car - a mobile app live on Google Play and the App Store',
+      why: "I've always wanted to build something that real people actually use, not just a demo. Kolario is a vibe-coded project: I built it with AI coding tools, while I owned the product decisions, the testing, and the whole release process up to Google Play and the App Store. Seeing it installed and used by drivers in Bulgaria is exactly what I was after.",
       problem: [
         'Replaces the paper service book, scattered invoices, and notebook notes with one organized, always-available history for each car.',
         'Logs every service visit with date, mileage, parts, labor, and cost, and tracks other car expenses (insurance, tax, vignette, fines) with charts by month and category.',
