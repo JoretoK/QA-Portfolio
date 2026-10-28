@@ -410,14 +410,11 @@ window.LOCALES.en = {
     bachelorDesc: 'Developing expertise in software technologies, design principles, and logical thinking. Building a strong foundation in software engineering and quality assurance practices.',
     thesisLabel: "Bachelor's thesis:",
     thesisDesc: '- an AI-powered platform for generating and reviewing Playwright tests',
-    bachelorGrade: 'Grade: Very good (5.03)',
     softuniTitle: 'QA Engineer Program - Computer Programming',
     softuniDesc: 'Comprehensive 17-month QA Automation Engineer program covering manual and automated testing. Curriculum included QA fundamentals, programming for QA, back-end and front-end test automation, and career development. Hands-on experience with Selenium, Appium, Postman, Swagger, Mocha, Chai, JMeter, K6, NUnit, and RestSharp.',
     softuniNote: 'Participated in live sessions, collaborative projects, peer reviews, and the IT Career Booster program.',
-    softuniGrade: 'Grade: Excellent (5.98)',
     schoolTitle: 'Secondary School Diploma - Mathematics and Computer Science',
-    schoolDesc: 'Focused on Mathematics and Informatics. Built strong analytical and logical thinking skills that form the foundation of quality-driven software testing.',
-    schoolGrade: 'Grade: Excellent (5.94)'
+    schoolDesc: 'Focused on Mathematics and Informatics. Built strong analytical and logical thinking skills that form the foundation of quality-driven software testing.'
   },
 
   loading: {
