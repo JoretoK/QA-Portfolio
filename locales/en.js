@@ -60,6 +60,7 @@ window.LOCALES.en = {
     education: 'Education',
     sectionConnect: 'Connect',
     downloadCv: 'Download CV',
+    cvFile: 'Georgi-Koleshanski-CV.pdf',
     email: 'Email'
   },
 

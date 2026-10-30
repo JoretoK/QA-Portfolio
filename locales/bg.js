@@ -60,6 +60,7 @@ window.LOCALES.bg = {
     education: 'Образование',
     sectionConnect: 'Контакти',
     downloadCv: 'Изтегли CV',
+    cvFile: 'Georgi-Koleshanski-CV-BG.pdf',
     email: 'Имейл'
   },
 
