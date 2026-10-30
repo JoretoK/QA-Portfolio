@@ -285,3 +285,62 @@ initFromHash();
     }, { once: true });
   }, 1300);
 }());
+
+(function () {
+  const base = 'https://abacus.jasoncameron.dev';
+  const ns   = 'gk-pf';
+  const src  = ['cv', 'linkedin', 'github'];
+  const n    = 14;
+
+  const q   = new URLSearchParams(location.search);
+  const m   = q.get('m');
+  const day = d => 'd-' + d.toISOString().slice(0, 10);
+
+  try {
+    if (m === '0' || m === '2') localStorage.setItem('gk-m', '1');
+    if (m === '1') localStorage.removeItem('gk-m');
+  } catch (e) {}
+
+  if (m === '2') { render(); return; }
+
+  try {
+    if (localStorage.getItem('gk-m') || sessionStorage.getItem('gk-s')) return;
+    sessionStorage.setItem('gk-s', '1');
+  } catch (e) { return; }
+
+  const send = k => fetch(`${base}/hit/${ns}/${k}`).catch(() => {});
+  send('v');
+  send(day(new Date()));
+  const r = (q.get('ref') || '').toLowerCase();
+  if (src.includes(r)) send('r-' + r);
+
+  function render() {
+    const read = k => fetch(`${base}/get/${ns}/${k}`)
+      .then(res => (res.ok ? res.json() : { value: 0 }))
+      .then(j => j.value || 0)
+      .catch(() => '?');
+
+    const days = [];
+    for (let i = 0; i < n; i++) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      days.push(day(d));
+    }
+
+    const el = document.createElement('div');
+    el.className = 'gk-p';
+    el.textContent = '…';
+    document.body.appendChild(el);
+
+    Promise.all([read('v'), ...days.map(read), ...src.map(s => read('r-' + s))]).then(vals => {
+      const dv = vals.slice(1, 1 + n);
+      const sv = vals.slice(1 + n);
+      el.innerHTML =
+        '<button type="button" class="gk-p-x" aria-label="Close">×</button>' +
+        `<h3>${vals[0]}</h3>` +
+        '<ul>' + days.map((k, i) => `<li><span>${k.slice(2)}</span><b>${dv[i]}</b></li>`).join('') + '</ul>' +
+        '<ul>' + src.map((s, i) => `<li><span>${s}</span><b>${sv[i]}</b></li>`).join('') + '</ul>';
+      el.querySelector('.gk-p-x').addEventListener('click', () => el.remove());
+    });
+  }
+}());
